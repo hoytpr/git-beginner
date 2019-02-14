@@ -104,9 +104,9 @@ origin  https://github.com/datacarpentry/wrangling-genomics.git (fetch)
 origin  https://github.com/datacarpentry/wrangling-genomics.git (push)
 ```
 
-- Setup the remote "upstream" as your remote GitHub repo
+- Setup the remote "upstream" as **your** remote GitHub repo
 
-`git remote add upstream https://github.com/datacarpentry/wrangling-genomics`
+`git remote add upstream https://github.com/hoytpr/wrangling-genomics`
 
 - check the remote upstream is correct
 
