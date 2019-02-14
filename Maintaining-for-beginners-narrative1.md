@@ -13,7 +13,7 @@
 
 ### How does GitHub REALLY work?
 
-Git-triangle.png
+![The GIT Triangle](../img/Git-triangle.png)
 
 Picture3.png
 
