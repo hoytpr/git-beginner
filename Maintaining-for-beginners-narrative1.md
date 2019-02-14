@@ -203,6 +203,7 @@ Then push the new lesson up to your online Github repo, and make a new branch fo
 git push upstream
 git checkout -b new-branch
 Switched to a new branch 'new-branch'
+git push --set-upstream origin new-branch
 ```
 
 NOW everything should be perfect. 
@@ -218,7 +219,9 @@ thus will be perfect with SWC gh-pages
 
 `____________________________________________`
 
+
 Alternate to above: Delete repo and re-clone from SWC
+
 `____________________________________________`
 
 
@@ -285,27 +288,27 @@ YAY!
 
 ### Other possible solutions found online:
 
-* Example 1 *
+**Example 1**
  Steps to clear out the history of a local git/github repository
 
-````
+```
 git-clearHistory
--- Remove the history from the repo 
+- Remove the history from the repo 
 rm -rf .git
-
--- recreate the repos from the current content only
+- recreate the repos from the current content only
 git init
 git add .
 git commit -m "Initial commit"
 
--- push to the github remote repos ensuring you overwrite history. Might have to `git remote rm origin` if origin exists
+- push to the github remote repos ensuring you overwrite history. Might have to `git remote rm origin` if origin exists
 git remote add origin git@github.com:<YOUR ACCOUNT>/<YOUR REPOS>.git
 git push -u --force origin master
-
 ```
+
 `_____________________________________`
 
-* Example2
+
+**Example2**
 
 Note: This might be problematic with repositories with git submodules.
 
