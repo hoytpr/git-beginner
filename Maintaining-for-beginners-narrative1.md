@@ -14,12 +14,13 @@
 ### How does GitHub REALLY work?
 
 ![The GIT Triangle](img/Git-triangle.png)
+**The GIT Triangle** shows the three basic areas you'll be working
 
-Picture3.png
+![The information flow 1](img/Picture3.png)
 
-Picture2.png
+![The information flow 1](Picture2.png)
 
-Picture1.png
+![The information flow 1](Picture1.png)
 
 ## Story
 
