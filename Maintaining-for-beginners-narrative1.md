@@ -78,14 +78,14 @@ So forget the GitHub Desktop for now)
 
 This won't work. You need a clean online GitHub repository. 
 
-### Bottom line: You can't use the GUI to get rid of the "history" of your repos, which will be included in your commits.###
+### Bottom line: You can't use the GUI to get rid of the "history" of your repos, which will be included in your commits.
 
-## Question: How to get everything up to date?
-## Answer: You must use the local repos, and the command line.
-## Problem: Getting Ruby installed to run Jekyl for local rendering of the page is HARD
-## Caveat: Getting changes on your remote GitHub repo to render properly is EASY
+** Question: ** How to get everything up to date?
+** Answer: ** You must use the local repos, and the command line.
+** Problem: ** Getting Ruby installed to run Jekyl for local rendering of the page is HARD
+** Caveat: ** Getting changes on your remote GitHub repo to render properly is EASY
 
-## My detailed protocol: 
+### One detailed protocol: 
 
 - Open GitBash whether updating an existing repo locally, or are cloning a new repo locally
 - Run: `git init` inside the repo (folder/directory)
