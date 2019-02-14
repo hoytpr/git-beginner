@@ -23,9 +23,14 @@ Picture1.png
 
 ## Story
 
-During active lesson updates, it is common for _your online_ GitHub repos to fall behind commits at the Carpentries. There may be an automated way for these to be synched, but it mysterious.
+During active lesson updates, it is common for _your online_ GitHub repos to fall behind commits at the Carpentries. 
+There may be an automated way for these to be synched, but it mysterious.
 
-After several attempts to fix this, I found myself having to simply recreate my online repos (by forking or cloning) before I could then make a change on a branch, and offer it as a PR to the Carpentries maintainer.  Being a maintainer myself, I often saw people include multiple "other" actions (adding files, changing files, correcting mistakes, etc.) that are included in PRs.
+After several attempts to fix this, I found myself having to simply delete and 
+recreate my online repos (by forking or cloning) before I could then make a change 
+on a branch, and offer it as a PR to the Carpentries maintainer.  Being a maintainer 
+myself, I often saw people include multiple "other" actions (adding files, changing files, 
+correcting mistakes, etc.) that are included in PRs.
 
 On the maintainers Slack channel I asked how to easily create a clean Github repo for a PR.
 
@@ -219,12 +224,6 @@ thus will be perfect with SWC gh-pages
 
 `____________________________________________`
 
-
-Alternate to above: Delete repo and re-clone from SWC
-
-`____________________________________________`
-
-
 ### Question
 
 If I changed something on my remote GitHub page, how can I reset it?
@@ -292,18 +291,19 @@ YAY!
 ### Other possible solutions found online:
 
 **Example 1**
- Steps to clear out the history of a local git/github repository
+ 
+Steps to clear out the history of a local git/github repository
 
 ```
 git-clearHistory
-- Remove the history from the repo 
+-- Remove the history from the repo 
 rm -rf .git
-- recreate the repos from the current content only
+-- recreate the repos from the current content only
 git init
 git add .
 git commit -m "Initial commit"
 
-- push to the github remote repos ensuring you overwrite history. Might have to `git remote rm origin` if origin exists
+-- push to the github remote repos and overwrite history. Might have to `git remote rm origin` if origin exists
 git remote add origin git@github.com:<YOUR ACCOUNT>/<YOUR REPOS>.git
 git push -u --force origin master
 ```
@@ -327,7 +327,7 @@ git gc --aggressive --prune=all     # remove the old files
 
 `____________________________________`
 
-* Example3
+**Example3**
 
 "Example1 didn't work but the following worked with more attributes during the push."
 
