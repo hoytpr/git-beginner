@@ -3,9 +3,9 @@
 
 ### Issues
 - Need a perfectly "clean" online GitHub repo to make a clean PR
--- Updates to lessons occur, making your online lessons "behind" the official repo
--- Cannot update your GitHub repo from the Carpentries without creating an update "history"
--- Update histories can be huge, making them unmanageable by maintainers
+- Updates to lessons occur, making your online lessons "behind" the official repo
+- Cannot update your GitHub repo from the Carpentries without creating an update "history"
+- Update histories can be huge, making them unmanageable by maintainers
 
 ### Key Points
 - How to create a clean online repo for making a pull request
@@ -80,10 +80,13 @@ This won't work. You need a clean online GitHub repository.
 
 ### Bottom line: You can't use the GUI to get rid of the "history" of your repos, which will be included in your commits.
 
-** Question: ** How to get everything up to date?
-** Answer: ** You must use the local repos, and the command line.
-** Problem: ** Getting Ruby installed to run Jekyl for local rendering of the page is HARD
-** Caveat: ** Getting changes on your remote GitHub repo to render properly is EASY
+**Question:** How to get everything up to date?
+
+**Answer:** You must use the local repos, and the command line.
+
+**Problem:** Getting Ruby installed to run Jekyl for local rendering of the page is HARD
+
+**Caveat:** Getting changes on your remote GitHub repo to render properly is EASY
 
 ### One detailed protocol: 
 
