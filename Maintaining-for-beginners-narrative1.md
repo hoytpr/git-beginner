@@ -14,13 +14,18 @@
 ### How does GitHub REALLY work?
 
 ![The GIT Triangle](img/Git-triangle.png)
-**The GIT Triangle** shows the three basic areas you'll be working
+**The GIT Triangle** (above) shows the three basic areas you'll be working
+
 
 ![The information flow 1](img/Picture3.png)
+**THere is an order to this process**
+- The arrows are numbered to help
 
-![The information flow 1](Picture2.png)
+![The information flow 1](img/Picture2.png)
+**Then you delete the old branch**
 
-![The information flow 1](Picture1.png)
+![The information flow 1](img/Picture1.png)
+**And you create a new branch**
 
 ## Story
 
