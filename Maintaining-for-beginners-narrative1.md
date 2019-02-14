@@ -212,7 +212,7 @@ If your upstream has some stupid commits you want to eliminate
 because they were pulls or pushes after you made changes to SWC,
 Once your LOCAL looks perfect from following above instructions, 
 
-$ git push -f upstream gh-pages
+`$ git push -f upstream gh-pages`
 
 NOW your upstream GitHub will be forced to look like your local
 thus will be perfect with SWC gh-pages
@@ -261,9 +261,11 @@ On branch gh-pages
 Your branch is up to date with 'origin/gh-pages'.     <== this is only true for ORIGIN!
 
 nothing to commit, working tree clean                 <==  But it looks like everything is fine!
+
 ```
 
 4. But your GitHub online repo says something like:
+
 	`"This is 2 commits behind <SWC-repo>"`         <==  This is the truth!!!!!
 
 5. To fix this you can FORCE the push upstream
@@ -282,6 +284,7 @@ To https://github.com/hoytpr/shell-novice
 ```
 
 6. Then go to the GitHub online repo and refresh the screen. It'll say:
+
 	`"This branch is even with swcarpentry:gh-pages."`
 
 YAY!
