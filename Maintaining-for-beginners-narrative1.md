@@ -16,15 +16,19 @@
 ![The GIT Triangle](img/Git-triangle.png)
 **The GIT Triangle** (above) shows the three basic areas you'll be working
 
+**SHOWN BELOW** But each basic area is divided into parts called branches
+Most of you know this, but this just illustrates which branches  
+are being used when you are pushing and pulling.  
 
 ![The information flow 1](img/Picture3.png)
-**THere is an order to this process**
-- The arrows are numbered to help
+**There is an order to this process**
+- The arrows are numbered to help guide you through a simple PR
+- Then you reset your local and remote repos
 
 ![The information flow 1](img/Picture2.png)
+
 **Then you delete the old branch**
 
-![The information flow 1](img/Picture1.png)
 **And you create a new branch**
 
 ## Story
