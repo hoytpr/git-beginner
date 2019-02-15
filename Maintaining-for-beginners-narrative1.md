@@ -283,9 +283,16 @@ nothing to commit, working tree clean                 <==  But it looks like eve
 
 	`"This is 2 commits behind <SWC-repo>"`         <==  This is the truth!!!!!
 
-5. To see the upstream changes you need to be specific and use `git diff`. For Example:
+5. To see the upstream changes you need to be on the same branch, and use `git diff` specifically. For Example:
 
 ```
+$ git checkout hoyt-patches
+Switched to branch 'hoyt-patches'
+$ git diff upstream/hoyt-patches
+                                          <== nothing returned = no differences
+$ git checkout gh-pages
+Switched to branch 'gh-pages'
+
 $ git diff upstream/gh-pages
 diff --git a/aio.md b/aio.md
 index 6d93852..a91fb0f 100644
@@ -345,4 +352,4 @@ To https://github.com/hoytpr/shell-novice
 
 	`"This branch is even with swcarpentry:gh-pages."`
 
-YAY!
+YAY! (Fin)
