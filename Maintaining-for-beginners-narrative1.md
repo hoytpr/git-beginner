@@ -21,7 +21,7 @@ https://sethrobertson.github.io/GitFixUm/fixup.html
 ![The GIT Triangle](img/Git-triangle.png)
 **The GIT Triangle** (above) shows the three basic areas you'll be working
 
-**SHOWN BELOW** But each basic area is divided into parts called branches
+**SHOWN BELOW** is how each basic area is divided into parts called branches
 Most of you know this, but this just illustrates which branches are being used when you are pushing and pulling.  
 
 ![The information flow 1](img/Picture3.png)
