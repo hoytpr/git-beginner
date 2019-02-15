@@ -90,7 +90,7 @@ So forget the GitHub Desktop for now)
 ## Common misconceptions of GitHub Management:
 
 1. One sees something that is an issue
-2. One notices their online repo is behind the Carpentries repo by two commits
+2. One notices their online repo is behind the Carpentries repo by two (or more or less) commits
 3. **Instinct** is to update your online GitHub repo by just pulling changes from Carpentries, then merging them.
 4. **This doesn't work** because your updated pull from the Carpentries now shows up as a part of your repo (part of it's "history")
 
