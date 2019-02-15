@@ -171,9 +171,9 @@ _*NOW*_ Use Max Belkims advice:
 > git checkout test-branch
 > # make changes
 > git add -u
-> git commit -m ...       *<== add commit message here*
+> git commit -m ...       <== add commit message here
 > git push upstream https://github.com/hoytpr/wrangling-genomics
-> # submit pull request using "test-branch" branch      *<== using your online GUI*
+> # submit pull request using "test-branch" branch      <== using your online GUI
 > git checkout gh-pages
 > ```
 
