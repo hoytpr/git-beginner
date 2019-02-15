@@ -1,8 +1,8 @@
 # git-beginner
-Maintainers lesson on PRs
+Maintainers have hard times with improperly formatted lesson PRs
 
-Specifically how to update and clean your repos
+It would be nice to have a page explaining the process for making a clean, up-to-date repo.
 
-Also a little about how GitHub really works
+This also has a little about how GitHub really works just to help beginners.
 
-Click on this link to [the Maintainers for beginners](https://github.com/hoytpr/git-beginner/blob/gh-pages/Maintaining-for-beginners-narrative1.md).
+Click on this link to [Clean Git for maintainers and beginners](https://github.com/hoytpr/git-beginner/blob/gh-pages/Maintaining-for-beginners-narrative1.md).
