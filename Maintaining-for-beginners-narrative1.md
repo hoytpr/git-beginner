@@ -39,7 +39,7 @@ for your next changes (if any)**
 ## Rationale
 
 During active lesson updates, it is common for **_your online_** GitHub repos to fall behind commits at the Carpentries. 
-There may be an automated way for these to be synched, but it mysterious.
+There may be an automated way for these to be synched, but it's mysterious.
 
 After several attempts to fix this, I found myself having to simply **delete and 
 recreate** my online AND my local repos (by forking or cloning) before I could then make clean changes 
@@ -180,10 +180,11 @@ _*NOW*_ Use Max Belkims advice:
 > ```
 
 ### Remember:
-- Make changes (to Carpentries lesson) using command-line on local repo using test-branch (not gh-pages)
+- Make changes to the Carpentries lesson using the command-line on **your local** repo using test-branch (not gh-pages)
 - Push changes to same test-branch (not gh-pages) of your online GitHub repo
-- Send in PR (to SWC) from remote Github repo using test-branch (not gh-pages)
-- When accepted by maintainer and merged, *delete* test-branch (at SWC) which will then show as an option on the PRs tab of the Carpentries lesson.
+- Send in PR (to SWC lesson site) from **remote** Github repo (GUI) using test-branch (not gh-pages)
+- When accepted by maintainer and merged, **delete your** test-branch (at SWC lesson site)
+- Deleting your branch which will show as an option on the PRs tab of the Carpentries lesson after merging.
 
 ## To clean things up
 - Go back to local command line
@@ -234,8 +235,8 @@ because they were pulls or pushes after you made changes to SWC.
 
 `$ git push -f upstream gh-pages`
 
-NOW your upstream GitHub will be ***forced*** to look like your local
-thus will be perfect with SWC gh-pages
+NOW your upstream GitHub will be ***forced*** to look like your local repo and
+will be up to date with SWC gh-pages
 
 `____________________________________________`
 
