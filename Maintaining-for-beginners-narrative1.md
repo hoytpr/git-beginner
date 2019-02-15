@@ -45,7 +45,7 @@ After several attempts to fix this, I found myself having to simply **delete and
 recreate** my online AND my local repos (by forking or cloning) before making clean changes 
 on a branch, to offer as a PR to the Carpentries maintainer.  Being a maintainer 
 myself, it was common for multiple "other" actions (adding files, changing files, 
-correcting mistakes, etc.) are included in PRs.
+correcting mistakes, etc.) to be included in PRs.
 
 By asking how to easily create a clean Github repo for a PR on the maintainers Slack channel,  
 
