@@ -268,7 +268,7 @@ hint: (e.g., 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 
-3. And even more confusing: (If someone knows how to see your ***upstream*** changes let me know!)
+3. And even more confusing: 
 
 ```
 $ git status
@@ -283,7 +283,50 @@ nothing to commit, working tree clean                 <==  But it looks like eve
 
 	`"This is 2 commits behind <SWC-repo>"`         <==  This is the truth!!!!!
 
-5. To fix this you can FORCE the push upstream
+5. To see the upstream changes you need to be specific and use `git diff`. For Example:
+
+```
+$ git diff upstream/gh-pages
+diff --git a/aio.md b/aio.md
+index 6d93852..a91fb0f 100644
+--- a/aio.md
++++ b/aio.md
+@@ -1,6 +1,6 @@
+ ---
+-layout: page
+-permalink: /aio/
++layout: page
++title: Aio
+ ---
+ <script>
+   window.onload = function() {
+diff --git a/reference.md b/reference.md
+index 87a20cc..6260be6 100644
+--- a/reference.md
++++ b/reference.md
+@@ -1,6 +1,6 @@
+ ---
+ layout: reference
+-permalink: /reference/
++title: Reference
+ ---
+
+ ## Glossary
+diff --git a/setup.md b/setup.md
+index e5c3cf4..bc92b52 100644
+--- a/setup.md
++++ b/setup.md
+@@ -1,7 +1,6 @@
+ ---
+ layout: page
+ title: Setup
+-permalink: /setup/
+ ---
+
+ This lesson requires a working spreadsheet program. If you don't have a spreadsheet program already, you can use LibreOffice. It's a free, open source spreadsheet program.
+```
+
+6. To fix this you can FORCE the push upstream
 
 ```
 $ git push -f upstream gh-pages
@@ -298,7 +341,7 @@ To https://github.com/hoytpr/shell-novice
  + c4ba13b...ff68e20 gh-pages -> gh-pages (forced update)
 ```
 
-6. Then go to the GitHub online repo and refresh the screen. It'll say:
+7. Then go to the GitHub online repo and refresh the screen. It'll say:
 
 	`"This branch is even with swcarpentry:gh-pages."`
 
