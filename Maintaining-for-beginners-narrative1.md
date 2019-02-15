@@ -1,6 +1,11 @@
 ### Problem to be addressed
 - To send a properly formatted PR to a Carpentries Lesson
 
+### Disclaimer:
+- There are several ways to do this, but a simple, consistent way needs to be spelled out. This is my suggestion. Many have said that "revert" rather than "reset" is a better option, but this is simple and works. If you want to create a better option, that's GREAT! Let's please put that page here or on the Carpentries site.
+- Note that many good ways to remove commits are found at:
+https://sethrobertson.github.io/GitFixUm/fixup.html
+
 ### Issues
 - Need a perfectly "clean" online GitHub repo to make a clean PR
 - Updates to lessons occur, making your online lessons "behind" the official repo
@@ -17,27 +22,27 @@
 **The GIT Triangle** (above) shows the three basic areas you'll be working
 
 **SHOWN BELOW** But each basic area is divided into parts called branches
-Most of you know this, but this just illustrates which branches  
-are being used when you are pushing and pulling.  
+Most of you know this, but this just illustrates which branches are being used when you are pushing and pulling.  
 
 ![The information flow 1](img/Picture3.png)
 **There is an order to this process**
 - The arrows are numbered to help guide you through a simple PR
-- Then you reset your local and remote repos
+- Once the PR is merged, you will want to delete your new-branch locally and online
 
 ![The information flow 1](img/Picture2.png)
 
-**Then you delete the old branch**
 
-**And you create a new branch**
+**Now, you'll want to make sure your repo is up to date with the Carpentries
+as shown below using Max Belkin's suggestions, then go ahead and make a new branch
+for your next changes (if any)**
 
-## Story
+## Rationale
 
-During active lesson updates, it is common for _your online_ GitHub repos to fall behind commits at the Carpentries. 
+During active lesson updates, it is common for **_your online_** GitHub repos to fall behind commits at the Carpentries. 
 There may be an automated way for these to be synched, but it mysterious.
 
-After several attempts to fix this, I found myself having to simply delete and 
-recreate my online repos (by forking or cloning) before I could then make a change 
+After several attempts to fix this, I found myself having to simply **delete and 
+recreate** my online AND my local repos (by forking or cloning) before I could then make clean changes 
 on a branch, and offer it as a PR to the Carpentries maintainer.  Being a maintainer 
 myself, I often saw people include multiple "other" actions (adding files, changing files, 
 correcting mistakes, etc.) that are included in PRs.
@@ -68,12 +73,12 @@ I got this helpful reply from Maxim Belkin:
 > git checkout my-changes
 > # make more changes
 > git commit -am "message" # same as `git add -u` followed by `git commit -m`
-> git push <your fork> # changes will appear on GitHub just fine
+> git push <your fork> # (<your fork> might be "your repo/new-branches", or sometimes just "git push" works)
 > git checkout gh-pages
 > ```
 > 
 > `git pull` is needed only to update the main branch (`gh-pages`) or when you've done changes to your 
-> "my-changes" branch on GitHub via web interface and would like to pull them to your computer 
+> "my-changes" branch on GitHub via web interface and would like to pull them to your computer <== **this is important!**
 > 
 
 *Maxim's advice worked!*
@@ -82,22 +87,20 @@ I got this helpful reply from Maxim Belkin:
 (We aren't teaching GitHub Desktop, probably for good reasons. 
 So forget the GitHub Desktop for now)
 
-## Example of wrong GitHub Management:
+## Common misconceptions of GitHub Management:
 
 1. One sees something that is an issue
 2. One notices their online repo is behind the Carpentries repo by two commits
-3. Instinct is to update your online GitHub repo by just pulling changes from Carpentries, then merging them.
-4. This doesn't work because your updated pull from the Carpentries now shows up as a part of your repo (part of it's "history")
+3. **Instinct** is to update your online GitHub repo by just pulling changes from Carpentries, then merging them.
+4. **This doesn't work** because your updated pull from the Carpentries now shows up as a part of your repo (part of it's "history")
 
-** Specific example: ** Looking at the comparison between repos, one update pulled to your GitHub repo included 2,048 additions and 1,617 deletions from earlier. This would then be sent, along with your *one* change, back to the maintainers! 
+**Specific example:** Looking at the comparison between repos, one update pulled to your GitHub repo included 2,048 additions and 1,617 deletions from earlier. This would then be sent, along with your *one* change, back to the maintainers! 
 
-This won't work. You need a clean online GitHub repository. 
-
-### Bottom line: You can't use the GUI to get rid of the "history" of your repos, which will be included in your commits.
+### Bottom line: You can't use the GUI to get rid of the "history" of your repos, which will be included in your commits. But you need a clean GitHub online repo for a PR
 
 **Question:** How to get everything up to date?
 
-**Answer:** You must use the local repos, and the command line.
+**Answer:** You **must** use the local repos, and the command line.
 
 **Problem:** Getting Ruby installed to run Jekyl for local rendering of the page is HARD
 
@@ -134,7 +137,7 @@ upstream        https://github.com/hoytpr/wrangling-genomics.git (push)
 
 ```
 
-- Make sure you have a "gh-pages" branch
+- Make sure you have a "gh-pages" branch and a branch for making changes and PRs
 
 ```
 $ git branch
@@ -142,8 +145,8 @@ $ git branch
   test-branch
 ```
 
-- You MUST have a gh-pages branch (and probably do), and a new branch (in my example it's named 'test-branch') to make changes for the PR.
-- If you *don't* have a branch for making changes you can create one. For example:
+- You MUST have a gh-pages branch (and probably do). 
+- If you don't have a gh-pages branch, or a branch for making changes (in my example it's named 'test-branch') to make changes for the PR you can create one. For example:
 
 ```
 $ git checkout -b test-branch
@@ -170,9 +173,9 @@ _*NOW*_ Use Max Belkims advice:
 > git checkout test-branch
 > # make changes
 > git add -u
-> git commit -m ...
+> git commit -m ...       *<== add commit message here*
 > git push upstream https://github.com/hoytpr/wrangling-genomics
-> # submit pull request using "test-branch" branch
+> # submit pull request using "test-branch" branch      *<== using your online GUI*
 > git checkout gh-pages
 > ```
 
@@ -180,7 +183,7 @@ _*NOW*_ Use Max Belkims advice:
 - Make changes (to Carpentries lesson) using command-line on local repo using test-branch (not gh-pages)
 - Push changes to same test-branch (not gh-pages) of your online GitHub repo
 - Send in PR (to SWC) from remote Github repo using test-branch (not gh-pages)
-- When accepted by maintainer and merged, *delete* test-branch (at SWC).
+- When accepted by maintainer and merged, *delete* test-branch (at SWC) which will then show as an option on the PRs tab of the Carpentries lesson.
 
 ## To clean things up
 - Go back to local command line
@@ -195,7 +198,7 @@ upstream        https://github.com/hoytpr/wrangling-genomics (fetch)
 upstream        https://github.com/hoytpr/wrangling-genomics (push)
 ```
 
-Clean up the local repo (FYI: To delete a branch; switch to a different branch, then use `-d`)
+Clean up the local repo (FYI: To delete a branch; first switch to a different branch, then use `-d`)
 
 ```
 $ git checkout gh-pages
@@ -204,7 +207,7 @@ $ git branch -d test-branch
 Deleted branch test-branch (was 3a0742a).
 ```
 
-Fetch the new Carpentries lesson and reset your gh-pages branch
+**Fetch** the new Carpentries lesson and **reset** your gh-pages branch
 
 ```
 git checkout gh-pages
@@ -221,24 +224,26 @@ Switched to a new branch 'new-branch'
 git push --set-upstream origin new-branch
 ```
 
-NOW everything should be perfect. 
+NOW everything should be up to date and ready for any new changes. 
 
-If your upstream has some stupid commits you want to eliminate
-because they were pulls or pushes after you made changes to SWC,
-Once your LOCAL looks perfect from following above instructions, 
+### Common Problem with simple solution
+
+- If your upstream has some stupid commits you want to eliminate
+because they were pulls or pushes after you made changes to SWC.
+- First make your LOCAL repo up to date as specified above, then run this command: 
 
 `$ git push -f upstream gh-pages`
 
-NOW your upstream GitHub will be forced to look like your local
+NOW your upstream GitHub will be ***forced*** to look like your local
 thus will be perfect with SWC gh-pages
 
 `____________________________________________`
 
-### Question
+### Common Question
 
 If I changed something on my remote GitHub page, how can I reset it?
 
-### Answer is complicated:
+### Answer is easy, but there are confusing parts of Git that you might see:
 
 1. Your local repo is great, as you just fetched and reset it from SWC.
 
@@ -262,7 +267,7 @@ hint: (e.g., 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 
-3. And even more confusing:
+3. And even more confusing: (If someone knows how to see your ***upstream*** changes let me know!)
 
 ```
 $ git status
@@ -297,62 +302,3 @@ To https://github.com/hoytpr/shell-novice
 	`"This branch is even with swcarpentry:gh-pages."`
 
 YAY!
-
-### Other possible solutions found online:
-
-**Example 1**
- 
-Steps to clear out the history of a local git/github repository
-
-```
-git-clearHistory
--- Remove the history from the repo 
-rm -rf .git
--- recreate the repos from the current content only
-git init
-git add .
-git commit -m "Initial commit"
-
--- push to the github remote repos and overwrite history. Might have to `git remote rm origin` if origin exists
-git remote add origin git@github.com:<YOUR ACCOUNT>/<YOUR REPOS>.git
-git push -u --force origin master
-```
-
-`_____________________________________`
-
-
-**Example2**
-
-Note: This might be problematic with repositories with git submodules.
-
-```
-git checkout --orphan newBranch
-git add -A  # Add all files and commit them
-git commit
-git branch -D master  # Deletes the master branch
-git branch -m master  # Rename the current branch to master
-git push -f origin master  # Force push master branch to github
-git gc --aggressive --prune=all     # remove the old files
-```
-
-`____________________________________`
-
-**Example3**
-
-"Example1 didn't work but the following worked with more attributes during the push."
-
-```
-git init
-git add .
-git commit -m 'Initial commit' 
-git remote rm origin 
-git remote add origin [repo_address]
-git push --mirror --force
-```
-
-Just a small comment :
-rm -rf .git <------ use this command from git bash.. NOT dos command prompt
-
-`_________________________________________`
-
-
