@@ -240,7 +240,7 @@ will be up to date with SWC gh-pages
 
 `____________________________________________`
 
-### Common Question
+### Common Problem, more detailed answer
 
 If I changed something on my remote GitHub page, how can I reset it?
 
