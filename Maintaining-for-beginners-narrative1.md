@@ -101,7 +101,7 @@ So forget the GitHub Desktop for now)
 **Question:** How to get everything up to date?
 
 **Answer:** You **must** use the local repos, and the command line. 
-- Once this becomes easy, you can move changes on your remote GitHub repo where they render properly. 
+- Once this becomes easy, you can move changes onto your remote GitHub repo where they render properly. 
 - (Getting Ruby installed to run Jekyl for local rendering of the page can be HARD)
 
 ### One detailed protocol: 
