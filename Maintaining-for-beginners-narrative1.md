@@ -92,9 +92,9 @@ So forget the GitHub Desktop for now)
 1. One sees something that is an issue
 2. One notices their online repo is behind the Carpentries repo by two (or more or less) commits
 3. **Instinct** is to update your online GitHub repo by just pulling changes from Carpentries, then merging them.
-4. **This doesn't work** because your updated pull from the Carpentries now shows up as a part of your repo (part of it's "history")
+4. **This doesn't work** because your online updated pull from the Carpentries now shows up as a part of your online repo (part of it's "history")
 
-**Specific example:** Looking at the comparison between repos, one update pulled to your GitHub repo included 2,048 additions and 1,617 deletions from earlier. This would then be sent, along with your *one* change, back to the maintainers! 
+**Specific example:** Looking at a comparison between repos, one update pulled to an online GitHub repo included 2,048 additions and 1,617 deletions from earlier. This would then be sent, along with your *one* change, back to the maintainers! 
 
 ### Bottom line: You can't use the GUI to get rid of the "history" of your repos, which will be included in your commits. But you need a clean GitHub online repo for a PR
 
