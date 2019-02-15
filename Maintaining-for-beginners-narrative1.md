@@ -42,14 +42,14 @@ During active lesson updates, it is common for **_your online_** GitHub repos to
 There may be an automated way for these to be synched, but it's mysterious.
 
 After several attempts to fix this, I found myself having to simply **delete and 
-recreate** my online AND my local repos (by forking or cloning) before I could then make clean changes 
-on a branch, and offer it as a PR to the Carpentries maintainer.  Being a maintainer 
-myself, I often saw people include multiple "other" actions (adding files, changing files, 
+recreate** my online AND my local repos (by forking or cloning) before making clean changes 
+on a branch, to offer as a PR to the Carpentries maintainer.  Being a maintainer 
+myself, it was common for people to include multiple "other" actions (adding files, changing files, 
 correcting mistakes, etc.) that are included in PRs.
 
-On the maintainers Slack channel I asked how to easily create a clean Github repo for a PR.
+By asking how to easily create a clean Github repo for a PR on the maintainers Slack channel,  
 
-I got this helpful reply from Maxim Belkin:
+Maxim Belkin gave a helpful reply:
 
 > Use branches for pull requests:
 > 
@@ -82,7 +82,7 @@ I got this helpful reply from Maxim Belkin:
 > 
 
 *Maxim's advice worked!*
-*But I was still having problems with remote GitHub Repos already ahead or behind the Carpentries repos*
+*But remote GitHub Repos being ahead or behind the Carpentries repos was still a problem*
 
 (We aren't teaching GitHub Desktop, probably for good reasons. 
 So forget the GitHub Desktop for now)
