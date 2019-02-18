@@ -12,7 +12,7 @@ specialized education.
 - Entering into, or even asymptoting toward, a new discipline can be a wonderful part of a lifelong learning process.
 But we all have different personal experiences while learning GitHub, varying from agonizing effort to simplistic boredom.
 - Considering everyones busy schedule, the hope is to provide context and guidance that improve 
-our collective experiances and simplify common processes.
+our collective experiences and simplify common processes.
 - Imposter syndrome is real, and one way to mitigate its effect is to change the balance of what’s known and what’s unknown.
 
 **Disclaimers**

@@ -1,8 +1,14 @@
+---
+theme: slate
+---
+
+[< Readme (home)](https://hoytpr.github.io/git_beginner/)
+
 ### Problem to be addressed
 - To send a properly formatted PR to a Carpentries Lesson
 
 ### Disclaimer:
-- There are [other ways](https://github.com/hoytpr/git-beginner/blob/gh-pages/Other-options.md) to do this, but a simple, consistent way needs to be spelled out. This is my suggestion. Many have said that "revert" rather than "reset" is a better option, but this is simple and works. If you want to create a better option, that's GREAT! Let's please put that page here or on the Carpentries site.
+- There are [other ways](https://hoytpr.github.io/git_beginner/Other-options) to do this, but a simple, consistent way needs to be spelled out. This is my suggestion. Many have said that "revert" rather than "reset" is a better option, but this is simple and works. If you want to create a better option, that's GREAT! Let's please put that page here or on the Carpentries site.
 - Note that many good ways to remove commits are found at:
 https://sethrobertson.github.io/GitFixUm/fixup.html
 
@@ -244,7 +250,7 @@ If I changed something on my remote GitHub page, how can I reset it?
 
 ### Answer is easy, but there are confusing parts of Git that you might see:
 
-1. Your local repo is great, as you just fetched and reset it from SWC.
+- Your local repo is great, as you just fetched and reset it from SWC.
 
 ```
 git checkout gh-pages
@@ -252,7 +258,7 @@ git fetch origin
 git reset --hard origin/gh-pages
 ```
 
-2. You want to make your GitHub upstream repo perfect also, but: 
+- You want to make your GitHub upstream repo perfect also, but: 
 
 ```
 $ git push upstream
@@ -266,7 +272,7 @@ hint: (e.g., 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 
-3. And even more confusing: 
+- And even more confusing: 
 
 ```
 $ git status
@@ -277,11 +283,11 @@ nothing to commit, working tree clean                 <==  But it looks like eve
 
 ```
 
-4. But your GitHub online repo says something like:
+- But your GitHub online repo says something like:
 
 	`"This is 2 commits behind <SWC-repo>"`         <==  This is the truth!!!!!
 
-5. To see the upstream changes you need to be on the same branch, and use `git diff` specifically. For Example:
+- To see the upstream changes you need to be on the same branch, and use `git diff` specifically. For Example:
 
 ```
 $ git checkout hoyt-patches
@@ -331,7 +337,7 @@ index e5c3cf4..bc92b52 100644
  This lesson requires a working spreadsheet program. If you don't have a spreadsheet program already, you can use LibreOffice. It's a free, open source spreadsheet program.
 ```
 
-6. To fix this you can FORCE the push upstream
+- To fix this you can FORCE the push upstream
 
 ```
 $ git push -f upstream gh-pages
@@ -346,8 +352,9 @@ To https://github.com/hoytpr/shell-novice
  + c4ba13b...ff68e20 gh-pages -> gh-pages (forced update)
 ```
 
-7. Then go to the GitHub online repo and refresh the screen. It'll say:
+- Then go to the GitHub online repo and refresh the screen. It'll say:
 
 	`"This branch is even with swcarpentry:gh-pages."`
 
 YAY! (Fin)
+[< Readme (home)](https://hoytpr.github.io/git_beginner/)
