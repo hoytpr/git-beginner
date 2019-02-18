@@ -1,3 +1,7 @@
+---
+theme: slate
+---
+
 ### Problem to be addressed
 - To send a properly formatted PR to a Carpentries Lesson
 
