@@ -9,5 +9,4 @@ Click on this link to [Clean Git for maintainers and beginners](https://hoytpr.g
 
 As we get suggestions, I plan to compile them in a single document so that problems and solutions are easy to see in one place. That document will be the [Suggestions-corrections-tips-and-tricks](https://hoytpr.github.io/git_beginner/Suggestions-corrections-tips-and-tricks) document
 
-
 [Motivations and Disclaimers](https://hoytpr.github.io/git_beginner/motivations_and_disclaimers)
