@@ -1,3 +1,7 @@
+---
+theme: slate
+---
+
 ### This is just a list of items that have been reported that are useful, and we might need to discuss to develop a "real" page where a protocol is described flawlessly.
 
 - **Use of "GitHub Online"**: Just wondering what is meant by this term? Perhaps 'user fork' or 'your fork' of a SWC repo might be clearer?
