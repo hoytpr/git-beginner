@@ -11,4 +11,4 @@ As we get suggestions, I plan to compile them in a single document so that probl
 
 [Motivations and Disclaimers](https://hoytpr.github.io/git_beginner/motivations_and_disclaimers)
 
-edit on [GitHub](https://github.com/hoytpr/git_beginner/README.md)
+edit on [GitHub](https://github.com/hoytpr/git_beginner/README)
