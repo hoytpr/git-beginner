@@ -1,4 +1,4 @@
-[<<< Go Back](https://hoytpr.github.io/git_beginner/Maintaining-for-beginners-narrative1.md)
+[< Go Back](https://hoytpr.github.io/git_beginner/Maintaining-for-beginners-narrative1)
 
 ### Other possible solutions found online:
 
