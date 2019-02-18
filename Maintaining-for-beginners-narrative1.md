@@ -2,6 +2,8 @@
 theme: slate
 ---
 
+[< Readme (home)](https://hoytpr.github.io/git_beginner/)
+
 ### Problem to be addressed
 - To send a properly formatted PR to a Carpentries Lesson
 
@@ -355,3 +357,4 @@ To https://github.com/hoytpr/shell-novice
 	`"This branch is even with swcarpentry:gh-pages."`
 
 YAY! (Fin)
+[< Readme (home)](https://hoytpr.github.io/git_beginner/)
