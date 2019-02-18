@@ -6,7 +6,7 @@ theme: slate
 - To send a properly formatted PR to a Carpentries Lesson
 
 ### Disclaimer:
-- There are [other ways](https://github.com/hoytpr/git-beginner/blob/gh-pages/Other-options.md) to do this, but a simple, consistent way needs to be spelled out. This is my suggestion. Many have said that "revert" rather than "reset" is a better option, but this is simple and works. If you want to create a better option, that's GREAT! Let's please put that page here or on the Carpentries site.
+- There are [other ways](https://hoytpr.github.io/git_beginner/Other-options) to do this, but a simple, consistent way needs to be spelled out. This is my suggestion. Many have said that "revert" rather than "reset" is a better option, but this is simple and works. If you want to create a better option, that's GREAT! Let's please put that page here or on the Carpentries site.
 - Note that many good ways to remove commits are found at:
 https://sethrobertson.github.io/GitFixUm/fixup.html
 
