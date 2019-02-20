@@ -150,7 +150,7 @@ $ git branch
 ```
 
 - You MUST have a gh-pages branch (and probably do). 
-- If you don't have a gh-pages branch, or a branch for making changes (in my example it's named 'test-branch') to make changes for the PR you can create one. For example:
+- If you don't have a gh-pages branch, or a branch (in my example it's named 'test-branch') to make changes for the PR you can create one. For example:
 
 ```
 $ git checkout -b test-branch
