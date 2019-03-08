@@ -44,7 +44,7 @@ questions:
 - Notice that arrow 2 (from GitHub to the Carpentries) is **one way only**
 - EDIT NOTE: The terms *origin* and *upstream* should be reversed according to convention. But they are okay for this lesson.
 
-## Using branches ##
+## Using branches (More arrows) ##
 ![The information flow 1](img/Picture3.png)
 
 **SHOWN ABOVE** is how each basic area is divided into parts called branches
