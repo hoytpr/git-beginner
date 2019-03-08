@@ -1,6 +1,23 @@
+---
+title: "Beginner Git for Maintainers"
+subtopic: "Known other ways describing this"
+questions:
+- "How to send a properly formatted PR to a Carpentries Lesson?"
+---
+
 [< Go Back](https://hoytpr.github.io/git_beginner/Maintaining-for-beginners-narrative1)
 
 ### Other possible solutions found online:
+
+**Great writeup by @sethrobertson [On undoing, fixing, or removing commits in git](https://sethrobertson.github.io/GitFixUm/fixup.html)
+
+**Another great writeup by [Tim Dennis at UCLA](https://www.tim-dennis.com/swc/2016/07/25/contributing-carpentries.html)
+
+**Great writeup by [@dmgt on GitHub](https://github.com/dmgt/swc_github_flow/blob/master/for_novice_contributors.md)
+
+__Any more good writeups can be included here!__
+
+##Some simple command sets found online
 
 **Example 1**
  
