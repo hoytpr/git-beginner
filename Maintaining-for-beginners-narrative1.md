@@ -178,7 +178,11 @@ $ git branch
 ```
 
 - You MUST have a gh-pages branch (and probably do). 
+<<<<<<< HEAD
 - If you don't have a gh-pages branch, or a branch for making changes (in my example it's named 'My-branch') you can create one. For example:
+=======
+- If you don't have a gh-pages branch, or a branch (in my example it's named 'test-branch') to make changes for the PR you can create one. For example:
+>>>>>>> bd8c9ea0e91b7bd063c8f9974831f31ea2d51c42
 
 ```
 $ git checkout -b My-branch
@@ -282,7 +286,11 @@ If I changed something on my remote GitHub page, how can I reset it?
 
 Example 
 
+<<<<<<< HEAD
 1. Your local "shell-novice" repo is perfect, because you just fetched and reset it from The Carpentries.
+=======
+- Your local repo is great, as you just fetched and reset it from SWC.
+>>>>>>> bd8c9ea0e91b7bd063c8f9974831f31ea2d51c42
 
 ```
 git checkout gh-pages
@@ -290,7 +298,11 @@ git fetch origin
 git reset --hard origin/gh-pages
 ```
 
+<<<<<<< HEAD
 2. Now make your GitHub upstream repo perfect, but when you try you get an error: 
+=======
+- You want to make your GitHub upstream repo perfect also, but: 
+>>>>>>> bd8c9ea0e91b7bd063c8f9974831f31ea2d51c42
 
 ```
 $ git push upstream
@@ -304,7 +316,11 @@ hint: (e.g., 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 
+<<<<<<< HEAD
 3. Checking your status makes things even more confusing: 
+=======
+- And even more confusing: 
+>>>>>>> bd8c9ea0e91b7bd063c8f9974831f31ea2d51c42
 
 ```
 $ git status
@@ -315,13 +331,21 @@ nothing to commit, working tree clean                 <== But it sure looks like
 
 ```
 
+<<<<<<< HEAD
 4. When you check your GitHub online repo it reports something like:
 
 	`"This is 2 commits behind swcarpentry:gh-pages"`         <==  This is true!!!!!
+=======
+- But your GitHub online repo says something like:
+>>>>>>> bd8c9ea0e91b7bd063c8f9974831f31ea2d51c42
 
 5. To understand all this you must be on the same branch locally AND upstream. Then use `git diff`. 
 
+<<<<<<< HEAD
 For Example:
+=======
+- To see the upstream changes you need to be on the same branch, and use `git diff` specifically. For Example:
+>>>>>>> bd8c9ea0e91b7bd063c8f9974831f31ea2d51c42
 
 ```
 $ git checkout My-branch
@@ -371,7 +395,11 @@ index e5c3cf4..bc92b52 100644
  This lesson requires a working spreadsheet program. If you don't have a spreadsheet program already, you can use LibreOffice. It's a free, open source spreadsheet program.
 ```
 
+<<<<<<< HEAD
 6. To fix differences in your upstream gh-pages branch you can FORCE (`-f`) the push upstream to that branch.
+=======
+- To fix this you can FORCE the push upstream
+>>>>>>> bd8c9ea0e91b7bd063c8f9974831f31ea2d51c42
 
 ```
 $ git push -f upstream gh-pages
@@ -386,7 +414,7 @@ To https://github.com/hoytpr/shell-novice
  + c4ba13b...ff68e20 gh-pages -> gh-pages (forced update)
 ```
 
-7. Then go to the GitHub online repo and refresh the screen. It'll say:
+- Then go to the GitHub online repo and refresh the screen. It'll say:
 
 	`"This branch is even with swcarpentry:gh-pages."`
 
