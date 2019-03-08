@@ -136,7 +136,7 @@ Maxim Belkin gave a helpful reply: (Edited for continuity)
 
 **Answer:** You **must** use the local repos, and the command line. 
 - BONUS: Once this becomes easy, you can move changes onto your remote GitHub repo where they render properly. 
-- CAUTION: Getting Ruby installed to run Jekyl for local rendering of the page can be HARD, but gives better error messages
+- CAUTION: Getting Ruby installed to run Jekyll for local rendering of the page can be HARD, but gives better error messages
 
 ### One detailed protocol for beginners: 
 
