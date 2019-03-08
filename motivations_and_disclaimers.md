@@ -19,4 +19,4 @@ our collective experiences and simplify common processes.
 
 - The information contained in this exercise as written is probably WRONG and will remain wrong until it gets fixed.
 - I have very little experience with GitHub and do not wish to imply in any way, whatsoever, that I have gained sufficient
-expertise to lead a discussiion on the topic. More than anything, this is a cry for help.
+expertise to lead a discussion on the topic. More than anything, this is a cry for help.
