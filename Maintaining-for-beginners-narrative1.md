@@ -12,18 +12,18 @@ questions:
 - There are [other ways](https://hoytpr.github.io/git_beginner/Other-options) to do this, but a simple, consistent way needs to be spelled out. This is my suggestion. Some say that "revert" rather than "reset" is a better option but this is simple and works. If you know a better option, that's GREAT! Let's please put all good options here then on the Carpentries site.
 
 ### objectives: ###
-- "Describe exact commands to sync a personal online (GitHub copy of) a Carpentries Workshop."
-- "Describe exact commands to sync a local copy of a Carpentries Workshop."
-- "Describe the exact process of making changes on a branch locally"
-- "Describe the exact process of pushing changes to your personal online repo"
-- "Describe how the personal online repo is used to create a Pull Request to The Carpentries"
-- "Describe how to **reset** your local and Github repos following a PR"
+- Describe exact commands to sync a personal online (GitHub copy of) a Carpentries Workshop.
+- Describe exact commands to sync a local copy of a Carpentries Workshop.
+- Describe the exact process of making changes on a branch locally
+- Describe the exact process of pushing changes to your personal online repo
+- Describe how the personal online repo is used to create a Pull Request to The Carpentries
+- Describe how to **reset** your local and Github repos following a PR
 
 ### keypoints: ###
-- "Need a perfectly **clean** online GitHub repo to make a clean PR"
-- "Updates to lessons occur, making your online lessons *behind* the official repo"
-- "Cannot update your GitHub repo from the Carpentries without creating an update **history**"
-- "Update histories can be huge, making them unmanageable by maintainers"
+- Need a perfectly **clean** online GitHub repo to make a clean PR
+- Updates to lessons occur, making your online lessons *behind* the official repo
+- Cannot update your GitHub repo from the Carpentries without creating an update **history**
+- Update histories can be huge, making them unmanageable by maintainers
 
 **NOTE: We aren't teaching GitHub Desktop, so this won't cover any possible GitHub Desktop solutions**
 
@@ -31,7 +31,7 @@ questions:
 
 ![The GIT Triangle](img/Git-triangle.png)
 **The GIT Triangle** (above) shows the three basic areas you'll be working
-- My perception of the Git/GitHub/Carpentries interactions
+
 
 * GitHub Online are your repositories on [GitHub](https://github.com/)
 * Carpentries represents The Carpentries lesson sites, or other sites where you contribute
@@ -61,7 +61,7 @@ Most of you know this, but this just illustrates which branches are being used w
 6. Then Push your up-to-date gh-pages branch to your upstream gh-pages branch. 
 
 **NOTE:**
-- There a reset step we will discuss later
+- There is a reset step we will discuss later
 - Once the PR is merged on the Carpentries site, delete your My-branch locally and on GitHub
 
 **Now, you can make sure your repo is up to date with the Carpentries
@@ -140,7 +140,8 @@ Maxim Belkin gave a helpful reply: (Edited for continuity)
 
 ### One detailed protocol for beginners: 
 
-- Open GitBash whether updating an existing repo locally, or are cloning a new repo locally
+- (Find a cloning-forking-downloading-creating-importing-and-their-differences page if needed)
+- Open GitBash or a Terminal whether updating an existing repo locally, or are cloning a new repo locally
 - Run: `git init` inside the repo (folder/directory)
 - Setup the remote "origin" to a Carpentries repo, for example the "wrangling-genomics"
 
