@@ -37,14 +37,14 @@ questions:
 * Carpentries represents The Carpentries lesson sites, or other sites where you contribute
 * Local Repos are kept on your personal computer, and accessed through a command prompt
 
-## Basic flow ##
+### Basic flow ###
 
 **There is an order to this process**
 - The arrows are numbered to help guide you through a simple PR
 - Notice that arrow 2 (from GitHub to the Carpentries) is **one way only**
 - EDIT NOTE: The terms *origin* and *upstream* should be reversed according to convention. But they are okay for this lesson.
 
-### Using branches ###
+## Using branches ##
 ![The information flow 1](img/Picture3.png)
 
 **SHOWN ABOVE** is how each basic area is divided into parts called branches
