@@ -48,7 +48,7 @@ questions:
 ![The information flow 1](img/Picture3.png)
 
 **SHOWN ABOVE** is how each basic area is divided into parts called branches
-Most of you know this, but this just illustrates which branches are being used when you are pushing and pulling.  
+Most of you know this, but this just illustrates which branches are being used when you are pushing and fetching.  
 
 ## Steps ##
 - Create a perfect copy of a Carpentries lesson (*e.g.* just downloaded or cloned). See detailed instructions for [users](One-detailed-protocol-for-general-beginners) or [maintainers](One-detailed-protocol-for-beginner-maintainers)
