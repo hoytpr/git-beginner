@@ -222,10 +222,13 @@ For Example: (NOTE this is only an example)
 $ git checkout My-branch
 Switched to branch 'My-branch'
 $ git diff upstream/My-branch
+```
                                    <== nothing is returned = no differences! So now you change to gh-pages branch
+```
 $ git checkout gh-pages
 Switched to branch 'gh-pages'
-
+```
+```
 $ git diff upstream/gh-pages
 diff --git a/aio.md b/aio.md		<== now you see differences!
 index 6d93852..a91fb0f 100644
@@ -250,6 +253,8 @@ index 87a20cc..6260be6 100644
 
 # Just make sure you don't do this to a Carpentries repo if you are a maintainer with write privledges!!!
 
+Example:
+
 ```
 $ git push -f upstream gh-pages
 Enumerating objects: 179, done.
@@ -267,5 +272,5 @@ To https://github.com/hoytpr/shell-novice
 
 	`"This branch is even with swcarpentry:gh-pages."`
 
-YAY! (Fin)
+### Imposter syndrome intensity should now be reduced!
 [< Readme (home)](https://hoytpr.github.io/git_beginner/)
