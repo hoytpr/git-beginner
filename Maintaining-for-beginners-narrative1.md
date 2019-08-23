@@ -161,8 +161,8 @@ After going through those protocols, and after everything is up to date and read
 
 ### A Simple Fix for a Common Problem
 
-- If your upstream has some stupid commits you want to eliminate
-because they were pulls or pushes after you made changes to SWC.
+If your upstream has some stupid commits you want to eliminate
+because they were pulls or pushes absentmindedly done on your gh-pages branch.
 - First make your LOCAL repo up to date as specified above, then run this command: 
 
 `$ git push -f upstream gh-pages`
