@@ -31,8 +31,7 @@ questions:
 ### How does GitHub REALLY work? (The newbie perspective)
 
 ![The GIT Triangle](img/Git-triangle.png)
-**The GIT Triangle** (above) shows the three basic areas you'll be working
-
+**The GIT Triangle** (above) shows the three basic areas where you will perform work.
 
 * GitHub Online are your repositories on [GitHub](https://github.com/)
 * Carpentries represents The Carpentries lesson sites, or other sites where you contribute
@@ -118,11 +117,12 @@ Maxim Belkin gave a helpful reply: (Edited for continuity)
 > **Use `git fetch` instead; almost ALWAYS**.
 
 *Maxim's advice worked!* (at least for my local repos)
-*But remote GitHub Repos being "ahead" or behind the Carpentries repos was still a problem*. 
+
+***But remote GitHub Repos being "ahead" or behind the Carpentries repos was still a problem***. 
 
 ## Here's why:
 
-*I was trying to update my `gh-pages` with pull requests. Or, I was updating my local repos, then updating my online (github) repos, after doing a "commit" on the `gh-pages`. It was so sad!*
+*I was trying to update my `gh-pages` with pull requests. Or, I was updating my local repos, then updating my online (github) repos, after doing a "commit" on the `gh-pages`. **It was so sad!***
 
 *If only I had heard (or probably remembered) someone telling me: "Never use commits on the gh-pages! Ever!"*
 
