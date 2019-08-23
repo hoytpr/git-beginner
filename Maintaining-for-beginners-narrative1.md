@@ -18,7 +18,7 @@ questions:
 - Describe the exact process of pushing changes to your personal online repo
 - Describe how the personal online repo is used to create a Pull Request to The Carpentries
 - Describe how to **reset** your local and Github repos following a PR
-	- Skip to the [reset fix](Maintaining-for-beginners-narrative1/#fix)
+	- Skip to the [reset fix](Maintaining-for-beginners-narrative1#fix)
 
 ### keypoints: ###
 - Need a perfectly **clean** online GitHub repo to make a clean PR
