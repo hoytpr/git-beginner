@@ -143,15 +143,15 @@ Maxim Belkin gave a helpful reply: (Edited for continuity)
 **Frustration:** One can't easily use the GitHub online GUI to fix the commit "history" of your repos `gh-pages` branch. 
 - A history of any commits (pulls, pushes) to the `gh-pages` will become part of your lesson contributions to the Carpentries. 
 
-**Problem:** How does one get their online repo (specifically the gh-pages) up to date without unneeded commit history?
+**Problem:** How does one get their online repo (specifically the `gh-pages`) up to date without unneeded commit history?
 
-**Disconnect** Experienced GIT-ers ***KNOW*** you don't have to keep your contributor site remote online repo's gh-pages branch updated ***at all***. (Deep breath) But if you WANT to, it's best done ONLY through your local repos (command line) and *never using a "commit" to the gh-pages branch*. 
+**Disconnect:** Experienced GIT-ers ***KNOW*** you don't have to keep your contributor site remote online repo's gh-pages branch updated ***at all***. (Deep breath) But if you WANT to, it's best done ONLY through your local repos (command line) and *never using a "commit" to the gh-pages branch*. 
 
 **Answer:** You **must** use the local repos, and the `fetch` at command line. 
-- BONUS: Once this becomes easy, you can move changes onto your remote GitHub repo where they render properly. 
+- BONUS: Once this becomes easy, you *can* move changes onto your remote GitHub repo where they render properly. 
 - CAUTION: Getting Ruby installed to run Jekyll for local rendering of the page can be HARD, but gives better error messages (Thanks to Ethan for demonstrating this)
 
-There are two detailed protocols:
+Here are two detailed protocols[\*](motivations_and_disclaimers):
 
 1. [For beginner contributors](One-detailed-protocol-for-beginners)
 
