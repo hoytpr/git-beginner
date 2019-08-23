@@ -11,13 +11,13 @@ key-points:
 
 ## One Detailed Protocol for Beginner Maintainers: 
 
-- Primary rule: Never "commit" a change to the `gh-pages` branch. **Ever**.
+- **Primary rule: Never "commit" a change to the `gh-pages` branch. *Ever***.
 	- Maintainers only change the `gh-pages` branch by merging PRs.
-- Secondary rule: Create an "Issue" before sending a substantial PR
+- **Secondary rule: Create an "Issue" before sending a substantial PR**
 	- Exceptions are for typos
-- Tertiary rule: Never merge your own PR
-	- No exceptions
-		- Except if no other maintainers are participating
+- **Tertiary rule: Never merge your own PR**
+	- No exceptions!
+		- *Except* if no other maintainers are participating
 
 ### Steps:
 
