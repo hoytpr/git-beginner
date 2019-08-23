@@ -1,7 +1,8 @@
-# git-beginner
+# GIT for Beginners
+
 Maintainers have hard times with improperly formatted lesson PRs
 
-It would be nice to have a page explaining the process for making a clean, up-to-date repo.
+These pages contain information about the process for making a clean, up-to-date repo.
 
 This also has a little about how GitHub really works just to help beginners.
 
