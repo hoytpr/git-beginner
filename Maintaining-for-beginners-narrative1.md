@@ -60,7 +60,8 @@ Most of you know this, but this just illustrates which branches are being used w
 5. To keep everything up-to-date, Pull the new merged changes to your gh-pages on your local repo
 6. Then Push your up-to-date gh-pages branch to your upstream gh-pages branch. 
 
-**NOTE:**
+**NOTES:**
+- Never do a "commit" to the gh-pages. ***Ever***.
 - There is a reset step we will discuss later
 - Once the PR is merged on the Carpentries site, delete your My-branch locally and on GitHub
 
@@ -68,14 +69,14 @@ Most of you know this, but this just illustrates which branches are being used w
 as described below and go ahead and make another new branch
 for your next contributions (if any)**
 
-## Rationale for these details
+## Rationale for these details or TL;DR
 
 During active lesson updates, it is common for **_your online_** GitHub repos to fall behind 
-commits at the Carpentries. Updating your site creates a HISTORY of the changes which 
+commits at the Carpentries. Updating your site incorrectly creates a HISTORY of the changes which 
 are included with your well-intentioned Pull Request. Included history is a nuisance
 There may be an automated way for these to be synced, but it's mysterious (to me).
 
-After several attempts, I found myself having to simply **delete and 
+After several attempts (like... two years), I found myself having to simply **delete and 
 recreate** my online AND my local repos (by forking and cloning) before making clean changes 
 on a branch, to offer as a PR to the Carpentries maintainer.  Being a maintainer 
 myself, it was common for multiple "other" action histories (adding files, changing files, 
@@ -113,154 +114,50 @@ Maxim Belkin gave a helpful reply: (Edited for continuity)
 > 
 > `git pull` is needed only to update the main branch (`gh-pages`) or when you've done changes to your 
 > "My-branch" branch on GitHub via web interface and would like to pull them to your computer <== **this is important!**
-> 
+> **Use `git fetch` instead almost ALWAYS**.
 
 *Maxim's advice worked!* (at least for my local repos)
-*But remote GitHub Repos being ahead or behind the Carpentries repos was still a problem*
+*But remote GitHub Repos being "ahead" or behind the Carpentries repos was still a problem*. 
 
-## The following is a description of why and what is confusing for a beginner using GitHub ##
+## Here's why:
 
-## Common misconceptions of GitHub Management:
+*I was trying to update my `gh-pages` with pull requests. Or, I was updating my local repos, then updating my online (github) repos, after doing a "commit" on the `gh-pages`. It was so sad! 
+
+*If only I had heard (or probably remembered) someone telling me: "Never use commits on the gh-pages! Ever!"*
+
+***So for beginners: "You do not need to, and probably should not ever, do a commit or a PR on the gh-pages branch of a repo, when you are a contributor or maintainer"***
+
+## The following is a description of why and what is confusing for a beginner using GitHub
+
+### Common (or easy) misconceptions of GitHub Management:
 
 1. One sees something that is an issue
 2. One notices their online repo is behind the Carpentries repo by two (or more or less) commits
-3. **Instinct** is to update your online GitHub repo by just pulling changes from Carpentries, then merging them.
-4. **This doesn't work well** because your online pull update from the Carpentries now shows up as a part of your online repo (part of it's "history")
+3. **Instinct** is to update your online GitHub repo `gh-pages` by just pulling changes from Carpentries, then merging them. 
+4. **Instinct** is to use `gh-pages` so that the site will render correctly from your repo.
+5. **This doesn't work well** because your online PR update from the Carpentries now shows up as a commit to your online repo (part of it's "history"). You will always be "one commit ahead" of the Carpentries repo.
+6. *Any future PR from your repo will include the gh-pages update as a commit*.
 
 **Specific example:** Looking at a comparison between repos, one Carpentries update pulled to an online GitHub repo included 2,048 additions and 1,617 deletions from earlier. This would then be sent, along with your *one* change, back to the maintainers! 
 
-### Bottom line: You can't use the GitHub online GUI to get rid of the "history" of your repos. 
-- History commits (pulls, pushes) will become part of your lesson contributions to the Carpentries. 
+**Frustration:** One can't easily use the GitHub online GUI to fix the commit "history" of your repos `gh-pages` branch. 
+- A history of any commits (pulls, pushes) to the `gh-pages` will become part of your lesson contributions to the Carpentries. 
 
-**Question:** How to get your online repo up to date without any unneeded history?
+**Problem:** How does one get their online repo (specifically the gh-pages) up to date without unneeded commit history?
 
-**Answer:** You **must** use the local repos, and the command line. 
+**Disconnect** Experienced GIT-ers ***KNOW*** you don't have to keep your contributor site remote online repo's gh-pages branch updated ***at all***. (Deep breath) But if you WANT to, it's best done ONLY through your local repos (command line) and *never using a "commit" to the gh-pages branch*. 
+
+**Answer:** You **must** use the local repos, and the `fetch` at command line. 
 - BONUS: Once this becomes easy, you can move changes onto your remote GitHub repo where they render properly. 
-- CAUTION: Getting Ruby installed to run Jekyll for local rendering of the page can be HARD, but gives better error messages
+- CAUTION: Getting Ruby installed to run Jekyll for local rendering of the page can be HARD, but gives better error messages (Thanks to Ethan for demonstrating this)
 
-### One detailed protocol for beginners: 
+There are two detailed protocols:
 
-- (Find a cloning-forking-downloading-creating-importing-and-their-differences page if needed)
-- Open GitBash or a Terminal whether updating an existing repo locally, or are cloning a new repo locally
-- Run: `git init` inside the repo (folder/directory)
-- Setup the remote "origin" to a Carpentries repo, for example the "wrangling-genomics"
+1. [For beginner contributors](One-detailed-protocol-for-beginners)
 
-`git remote add origin https://github.com/datacarpentry/wrangling-genomics`
+2. [For beginner maintainers](One-detailed-protocol-for-beginner-maintainers)
 
-- check the remote origin is correct
-
-```
-git remote -v
-origin  https://github.com/datacarpentry/wrangling-genomics.git (fetch)
-origin  https://github.com/datacarpentry/wrangling-genomics.git (push)
-```
-
-- Setup the remote "upstream" as **your** remote GitHub repo
-
-`git remote add upstream https://github.com/hoytpr/wrangling-genomics`
-
-- check the remote upstream is correct
-
-```
-git remote -v
-origin  https://github.com/datacarpentry/wrangling-genomics.git (fetch)
-origin  https://github.com/datacarpentry/wrangling-genomics.git (push)
-upstream        https://github.com/hoytpr/wrangling-genomics.git (fetch)
-upstream        https://github.com/hoytpr/wrangling-genomics.git (push)
-
-```
-
-- Make sure you have a "gh-pages" branch and a branch for making changes and PRs
-
-```
-$ git branch
-* gh-pages
-  My-branch
-```
-
-- You MUST have a gh-pages branch (and probably do). 
-- If you don't have a gh-pages branch, or a branch for making changes (in my example it's named 'My-branch') you can create one. For example:
-
-```
-$ git checkout -b My-branch
-Switched to a new branch 'My-branch'
-```
-
-- Make *sure* you made the branch correctly.
-
-```
-$ git branch
-  gh-pages
-* My-branch
-```
-
-_*NOW*_ Use Max Belkims advice:
-
-> ```
-> git checkout -f gh-pages
-> git fetch origin
-> git reset --hard origin/gh-pages
-> git branch
->    gh-pages
->    My-branch
-> git checkout My-branch
-> # make changes
-> git add -u
-> git commit -m ...       <== add commit message here
-> git push upstream https://github.com/hoytpr/wrangling-genomics
-> # submit pull request to The Carpentries using "My-branch" branch      <== using your online GUI
-> git checkout gh-pages
-> ```
-
-### Remember:
-- Make changes to the Carpentries lesson using the command-line on **your local** repo using My-branch (not gh-pages)
-- Push changes to same My-branch (not gh-pages) of your online GitHub repo
-- Send in PR (to SWC lesson site) from **remote** Github repo (GUI) using My-branch (not gh-pages)
-- When accepted by maintainer and merged, **delete your** My-branch (at SWC lesson site)
-- (Deleting your branch which will show as an option on the PRs tab of the Carpentries lesson after merging.)
-
-## To clean things up
-- Go back to local command line
-
-The remote setup should still look like this:
-
-```
-$ git remote -v
-origin  https://github.com/datacarpentry/wrangling-genomics (fetch)
-origin  https://github.com/datacarpentry/wrangling-genomics (push)
-upstream        https://github.com/hoytpr/wrangling-genomics (fetch)
-upstream        https://github.com/hoytpr/wrangling-genomics (push)
-```
-
-Clean up the local repo (FYI: To delete a branch; first switch to a different branch, then use `-d`)
-
-```
-$ git checkout gh-pages
-Switched to branch 'gh-pages'
-$ git branch -d My-branch
-Deleted branch My-branch (was 3a0742a).
-```
-
-**Fetch** the new Carpentries lesson and **reset** your gh-pages branch
-
-```
-git checkout gh-pages
-git fetch origin
-git reset --hard origin/gh-pages
-```
-
-Then push the new lesson up to your online Github repo
-
-`git push upstream`
-
-Then make a new local branch for future changes
-```
-git checkout -b new-branch
-Switched to a new branch 'new-branch'
-git push --set-upstream origin new-branch
-```
-
-NOW everything should be up to date and ready for any new changes. 
+After going through those protocols, and after everything is up to date and ready for any new changes, come back here for some insights into other potentially counfusing aspects of Github (and some solutions in shorter format). 
 
 ### A Simple Fix for a Common Problem
 
@@ -275,15 +172,11 @@ will be up to date with SWC gh-pages
 
 `____________________________________________`
 
-### Same Common Problem, with a more details for beginners
+### Same problem: Deciphering messages for beginners
 
-If I changed something on my remote GitHub page, how can I reset it?
+Example:
 
-### There are confusing messages within Git that you might see:
-
-Example 
-
-1. Your local "shell-novice" repo is perfect, because you just fetched and reset it from The Carpentries.
+1. Your local "shell-novice" repo is ***perfect***, because you just fetched and reset it from The Carpentries.
 
 ```
 git checkout gh-pages
@@ -291,7 +184,7 @@ git fetch origin
 git reset --hard origin/gh-pages
 ```
 
-2. Now make your GitHub upstream repo perfect, but when you try you get an error: 
+2. Now you want to make your GitHub upstream repo perfect, so it will render properly. But when you try you get an error: 
 
 ```
 $ git push upstream
@@ -305,35 +198,36 @@ hint: (e.g., 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 
-3. Checking your status makes things even more confusing: 
+3. Checking your status might make things even more confusing: 
 
 ```
 $ git status
 On branch gh-pages
-Your branch is up to date with 'origin/gh-pages'.     <== Ahah! This is only true for ORIGIN!
+Your branch is up to date with 'origin/gh-pages'.     <== Ahah! This is only true for "origin"!
 
 nothing to commit, working tree clean                 <== But it sure looks like everything is fine!
 
 ```
 
-4. When you check your GitHub online repo it reports something like:
+4. When you open your browser and check your GitHub online repo it reports something like:
 
 	`"This is 2 commits behind swcarpentry:gh-pages"`         <==  This is true!!!!!
 
-5. To understand all this you must be on the same branch locally AND upstream. Then use `git diff`. 
+5. To decipher where the problem is change branches locally and compare to upstream (not origin) using `git diff`. 
 
-For Example:
+For Example: (NOTE this is only an example)
 
 ```
 $ git checkout My-branch
 Switched to branch 'My-branch'
 $ git diff upstream/My-branch
-                                          <== nothing returned = no differences
+                                   <== nothing is returned = no differences!
+								   So now you change to gh-pages branch
 $ git checkout gh-pages
 Switched to branch 'gh-pages'
 
 $ git diff upstream/gh-pages
-diff --git a/aio.md b/aio.md              <== now you see differences!
+diff --git a/aio.md b/aio.md		<== now you see differences!
 index 6d93852..a91fb0f 100644
 --- a/aio.md
 +++ b/aio.md
@@ -349,30 +243,12 @@ index 6d93852..a91fb0f 100644
 diff --git a/reference.md b/reference.md
 index 87a20cc..6260be6 100644
 --- a/reference.md
-+++ b/reference.md
-@@ -1,6 +1,6 @@
- ---
- layout: reference
--permalink: /reference/
-+title: Reference
- ---
-
- ## Glossary
-diff --git a/setup.md b/setup.md
-index e5c3cf4..bc92b52 100644
---- a/setup.md
-+++ b/setup.md
-@@ -1,7 +1,6 @@
- ---
- layout: page
- title: Setup
--permalink: /setup/
- ---
-
- This lesson requires a working spreadsheet program. If you don't have a spreadsheet program already, you can use LibreOffice. It's a free, open source spreadsheet program.
+<snip></snip> etc.
 ```
 
-6. To fix differences in your upstream gh-pages branch you can FORCE (`-f`) the push upstream to that branch.
+6. To ***fix differences*** in your upstream gh-pages branch you can FORCE (`-f`) the push upstream to that branch. This obliterates differences (good or bad) between your local repos, and your Github (online) repos. 
+
+# Just make sure you don't do this to a Carpentries repo if you are a maintainer with write privledges!!!
 
 ```
 $ git push -f upstream gh-pages
