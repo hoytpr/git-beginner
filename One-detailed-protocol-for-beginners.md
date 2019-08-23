@@ -35,6 +35,7 @@ origin  https://github.com/datacarpentry/wrangling-genomics.git (fetch)
 origin  https://github.com/datacarpentry/wrangling-genomics.git (push)
 ```	
 - Check which branches exist:
+
 ```
 $ git branch
 * gh-pages
@@ -57,6 +58,7 @@ $ git branch
 - Check your remote connections again
 	- git remote -v
 		- Should see something like:
+
 ```
 git remote -v
 origin  https://github.com/datacarpentry/wrangling-genomics.git (fetch)
@@ -65,6 +67,7 @@ upstream        https://github.com/hoytpr/wrangling-genomics.git (fetch)
 upstream        https://github.com/hoytpr/wrangling-genomics.git (push)
 ```	
    - Generic example:
+
 ```
 git remote -v
 origin  https://github.com/<organization>/<repo-name>.git (fetch)
