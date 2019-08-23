@@ -54,7 +54,7 @@ $ git branch
 		- `git remote add upstream https://github.com/hoytpr/wrangling-genomics`
 	- Generic example:
 		- `git remote add upstream https://github.com/<your-github-username>/<repo-name>`
-	- NOTE: You connecting to your **remote** repo, AND you are assigning  `upstream` as the "alias" for that repo.
+	- NOTE: You are connecting to your **remote** repo, AND you are assigning  `upstream` as the "alias" for that repo.
 - Check your remote connections again
 	- git remote -v
 		- Should see something like:
