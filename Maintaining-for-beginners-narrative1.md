@@ -173,7 +173,7 @@ will be up to date with the Carpentries gh-pages branch
 
 `____________________________________________`
 
-### Same problem: Deciphering messages for beginners
+### Deciphering messages for beginners
 
 Example:
 
