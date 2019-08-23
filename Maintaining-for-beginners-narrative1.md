@@ -44,7 +44,7 @@ questions:
 - Notice that this diagram uses arrows that are **one way only**. This is intentional and (IMHO) accurately represents the process
 - EDIT NOTE: The terms *origin* and *upstream* should be reversed according to convention. But they are okay for this lesson.
 
-## Using branches (More arrows) ##
+## Update everything using branches
 ![The information flow 1](img/Picture3.png)
 
 **SHOWN ABOVE** is how each basic area is divided into parts called branches
