@@ -221,8 +221,7 @@ For Example: (NOTE this is only an example)
 $ git checkout My-branch
 Switched to branch 'My-branch'
 $ git diff upstream/My-branch
-                                   <== nothing is returned = no differences!
-								   So now you change to gh-pages branch
+                                   <== nothing is returned = no differences! So now you change to gh-pages branch
 $ git checkout gh-pages
 Switched to branch 'gh-pages'
 
