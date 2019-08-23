@@ -41,7 +41,7 @@ questions:
 
 **There is an order to this process**
 - The arrows are numbered to help guide you through a simple PR
-- Notice that arrow 2 (from GitHub to the Carpentries) is **one way only**
+- Notice that this diagram uses arrows that are **one way only**. This is intentional and (IMHO) accurately represents the process
 - EDIT NOTE: The terms *origin* and *upstream* should be reversed according to convention. But they are okay for this lesson.
 
 ## Using branches (More arrows) ##
@@ -51,7 +51,7 @@ questions:
 Most of you know this, but this just illustrates which branches are being used when you are pushing and pulling.  
 
 ## Steps ##
-- Create a perfect copy of a Carpentries lesson (e.g. just downloaded or cloned)
+- Create a perfect copy of a Carpentries lesson (*e.g.* just downloaded or cloned). See detailed instructions for [users](One-detailed-protocol-for-general-beginners) or [maintainers](One-detailed-protocol-for-beginner-maintainers)
 
 1. Checkout (create) a new branch (My-branch) and make changes to the lesson on this branch
 2. Push your changes to the same branch on your Github (upstream) repo
