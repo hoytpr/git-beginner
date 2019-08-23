@@ -7,7 +7,7 @@ theme: slate
 - This small example is not intended to be anything close to a definitive model for how to use GitHub, 
 or a consensus pedagogy for how Maintainers use GitHub. This was motivated by my own failures and frustrations. There are
 myriad rules and conventions that surround the proper use of GitHub but they are often buried in long and
-well-intentioned instructions or tutorials filled with the specialized jargon we all use based on our unique and 
+well-intentioned instructions or tutorials filled with the jargon we all use based on our unique and 
 specialized education. 
 - Entering into, or even asymptoting toward, a new discipline can be a wonderful part of a lifelong learning process.
 But we all have different personal experiences while learning GitHub, varying from agonizing effort to simplistic boredom.

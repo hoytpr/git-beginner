@@ -18,6 +18,7 @@ questions:
 - Describe the exact process of pushing changes to your personal online repo
 - Describe how the personal online repo is used to create a Pull Request to The Carpentries
 - Describe how to **reset** your local and Github repos following a PR
+	- Skip to the [reset fix](Maintaining-for-beginners-narrative1/#fix)
 
 ### keypoints: ###
 - Need a perfectly **clean** online GitHub repo to make a clean PR
@@ -114,7 +115,7 @@ Maxim Belkin gave a helpful reply: (Edited for continuity)
 > 
 > `git pull` is needed only to update the main branch (`gh-pages`) or when you've done changes to your 
 > "My-branch" branch on GitHub via web interface and would like to pull them to your computer <== **this is important!**
-> **Use `git fetch` instead almost ALWAYS**.
+> **Use `git fetch` instead; almost ALWAYS**.
 
 *Maxim's advice worked!* (at least for my local repos)
 *But remote GitHub Repos being "ahead" or behind the Carpentries repos was still a problem*. 
@@ -127,7 +128,7 @@ Maxim Belkin gave a helpful reply: (Edited for continuity)
 
 ***So for beginners: "You do not need to, and probably should not ever, do a commit or a PR on the gh-pages branch of a repo, when you are a contributor or maintainer"***
 
-## The following is a description of why and what is confusing for a beginner using GitHub
+## What might confuse a beginner using GitHub
 
 ### Common (or easy) misconceptions of GitHub Management:
 
@@ -159,7 +160,7 @@ Here are two detailed protocols[\*](motivations_and_disclaimers):
 
 After going through those protocols, and after everything is up to date and ready for any new changes, come back here for some insights into other potentially counfusing aspects of Github (and some solutions in shorter format). 
 
-### A Simple Fix for a Common Problem
+### A Simple Fix for a Common Problem <a name="fix"></a>
 
 If your upstream has some stupid commits you want to eliminate
 because they were pulls or pushes absentmindedly done on your gh-pages branch.
@@ -168,7 +169,7 @@ because they were pulls or pushes absentmindedly done on your gh-pages branch.
 `$ git push -f upstream gh-pages`
 
 NOW your upstream GitHub will be ***forced*** to look like your local repo and
-will be up to date with SWC gh-pages
+will be up to date with the Carpentries gh-pages branch
 
 `____________________________________________`
 
