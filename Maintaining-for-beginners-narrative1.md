@@ -121,7 +121,7 @@ Maxim Belkin gave a helpful reply: (Edited for continuity)
 
 ## Here's why:
 
-*I was trying to update my `gh-pages` with pull requests. Or, I was updating my local repos, then updating my online (github) repos, after doing a "commit" on the `gh-pages`. It was so sad! 
+*I was trying to update my `gh-pages` with pull requests. Or, I was updating my local repos, then updating my online (github) repos, after doing a "commit" on the `gh-pages`. It was so sad!*
 
 *If only I had heard (or probably remembered) someone telling me: "Never use commits on the gh-pages! Ever!"*
 
