@@ -163,7 +163,7 @@ After going through those protocols, and after everything is up to date and read
 ### A Simple Fix for a Common Problem <a name="fix"></a>
 
 If your upstream has some stupid commits you want to eliminate
-because they were pulls or pushes absentmindedly done on your gh-pages branch.
+because they were pulls or pushes absentmindedly done on your `gh-pages` branch in your `upstream` repo.
 - First make your LOCAL repo up to date as specified above, then run this command: 
 
 `$ git push -f upstream gh-pages`
