@@ -41,7 +41,7 @@ questions:
 
 **There is an order to this process**
 - The arrows are numbered to help guide you through a simple PR
-- Notice that this diagram uses arrows that are **one way only**. This is intentional and (IMHO) accurately represents the process
+- Notice that this diagram uses arrows that are **one way only**. This is ***intentional*** and (IMHO) accurately represents the process
 - EDIT NOTE: The terms *origin* and *upstream* should be reversed according to convention. But they are okay for this lesson.
 
 ## Update everything using branches
@@ -120,7 +120,7 @@ Maxim Belkin gave a helpful reply: (Edited for continuity)
 
 ***But remote GitHub Repos being "ahead" or behind the Carpentries repos was still a problem***. 
 
-## Here's why:
+## Here's why:M
 
 *I was trying to update my `gh-pages` with pull requests. Or, I was updating my local repos, then updating my online (github) repos, after doing a "commit" on the `gh-pages`. **It was so sad!***
 
