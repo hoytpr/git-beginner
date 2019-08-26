@@ -120,7 +120,7 @@ Maxim Belkin gave a helpful reply: (Edited for continuity)
 
 ***But remote GitHub Repos being "ahead" or behind the Carpentries repos was still a problem***. 
 
-## Here's why:M
+## Here's why:
 
 *I was trying to update my `gh-pages` with pull requests. Or, I was updating my local repos, then updating my online (github) repos, after doing a "commit" on the `gh-pages`. **It was so sad!***
 
@@ -212,7 +212,7 @@ nothing to commit, working tree clean                 <== But it sure looks like
 
 4. When you open your browser and check your GitHub online repo it reports something like:
 
-	`"This is 2 commits behind swcarpentry:gh-pages"`         <==  This is true!!!!!
+	`"This is 2 commits behind swcarpentry:gh-pages"`         <==  This is true for gh-pages!!!!!
 
 5. To decipher where the problem is change branches locally and compare to upstream (not origin) using `git diff`. 
 
@@ -223,7 +223,7 @@ $ git checkout My-branch
 Switched to branch 'My-branch'
 $ git diff upstream/My-branch
 ```
-                                   <== nothing is returned = no differences! So now you change to gh-pages branch
+                                   <== nothing is returned = no differences! So now you change to `gh-pages` branch
 ```
 $ git checkout gh-pages
 Switched to branch 'gh-pages'
@@ -249,7 +249,7 @@ index 87a20cc..6260be6 100644
 <snip></snip> etc.
 ```
 
-6. To ***fix differences*** in your upstream gh-pages branch you can FORCE (`-f`) the push upstream to that branch. This obliterates differences (good or bad) between your local repos, and your Github (online) repos. 
+6. To ***fix differences*** in your upstream `gh-pages` branch you can FORCE (`-f`) the push upstream to that branch. This obliterates differences (**good or bad**) between your local repos, and your Github (online) repos. 
 
 # Just make sure you don't do this to a Carpentries repo if you are a maintainer with write privledges!!!
 
