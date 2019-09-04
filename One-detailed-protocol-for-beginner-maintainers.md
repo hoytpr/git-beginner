@@ -1,12 +1,5 @@
 ---
-title: "One Detailed Protocol For Beginner Maintainers"
-teaching: 10
-exercises: 0
-questions:
-- "How to prevent things from going wrong"
-- "How to fix things that have gone wrong"
-key-points:
-- "The detailed protocol"
+
 ---
 
 [Readme (home)]({{ site.baseurl }}/)

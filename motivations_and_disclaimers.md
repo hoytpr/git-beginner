@@ -1,5 +1,5 @@
 ---
-theme: slate
+
 ---
 
 **Motivations**

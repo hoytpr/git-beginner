@@ -1,11 +1,8 @@
 ---
-title: "Beginner Git for Maintainers"
-subtopic: "Known other ways describing this"
-questions:
-- "How to send a properly formatted PR to a Carpentries Lesson?"
+
 ---
 
-[< Go Back](https://hoytpr.github.io/git_beginner/Maintaining-for-beginners-narrative1)
+[< Go Back]({{ site.baseurl }}/Maintaining-for-beginners-narrative1)
 
 ### Other possible solutions found online: ###
 

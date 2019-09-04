@@ -1,9 +1,5 @@
 ---
-title: "Beginner Git for Maintainers"
-teaching: 10
-exercises: 0
-questions:
-- "How to send a properly formatted PR to a Carpentries Lesson?"
+
 ---
 
 [Readme (home)]({{ site.baseurl }}/)

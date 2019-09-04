@@ -1,7 +1,5 @@
 ---
-title: "Suggestions-Corrections-Tips-and-Tricks"
-teaching: 10000000
-exercises: 0
+
 ---
 
 ### These are some discussion items that could be useful. 

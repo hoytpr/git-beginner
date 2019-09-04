@@ -1,9 +1,5 @@
 ---
-title: Git For Beginners
-theme: slate
 ---
-
-# GIT for Beginners
 
 Maintainers have hard times with improperly formatted lesson PRs
 
