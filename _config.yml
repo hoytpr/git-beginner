@@ -1,7 +1,7 @@
 #Sites
 title: [Git for Beginner Maintainers]
-home-page: "https://hoytpr.github.io/git_beginner/"
-favicon.ico: "https://hoytpr.github.io/git_beginner/img/favicon.ico"
+home-page: https://hoytpr.github.io/git_beginner/
+favicon.ico: https://hoytpr.github.io/git_beginner/img/favicon.ico
 github: [metadata]
 encoding: UTF-8
 kramdown:
