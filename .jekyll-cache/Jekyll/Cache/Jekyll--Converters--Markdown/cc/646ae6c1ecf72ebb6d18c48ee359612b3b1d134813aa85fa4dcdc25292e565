@@ -1,0 +1,314 @@
+I"yB<p><a href="https://hoytpr.github.io/git_beginner/">&lt; Readme (home)</a></p>
+
+<h3 id="disclaimer">Disclaimer:</h3>
+<ul>
+  <li>There are <a href="https://hoytpr.github.io/git_beginner/Other-options">other ways</a> to do this, but a simple, consistent way needs to be spelled out. This is my suggestion. Some say that “revert” rather than “reset” is a better option but this is simple and works. If you know a better option, that’s GREAT! Let’s please put all good options here then on the Carpentries site.</li>
+</ul>
+
+<h3 id="objectives">objectives:</h3>
+<ul>
+  <li>Describe exact commands to sync a personal online (GitHub copy of) a Carpentries Workshop.</li>
+  <li>Describe exact commands to sync a local copy of a Carpentries Workshop.</li>
+  <li>Describe the exact process of making changes on a branch locally</li>
+  <li>Describe the exact process of pushing changes to your personal online repo</li>
+  <li>Describe how the personal online repo is used to create a Pull Request to The Carpentries</li>
+  <li>Describe how to <strong>reset</strong> your local and Github repos following a PR
+    <ul>
+      <li>Skip to the <a href="Maintaining-for-beginners-narrative1#fix">reset fix</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="keypoints">keypoints:</h3>
+<ul>
+  <li>Need a perfectly <strong>clean</strong> online GitHub repo to make a clean PR</li>
+  <li>Updates to lessons occur, making your online lessons <em>behind</em> the official repo</li>
+  <li>Cannot update your GitHub repo from the Carpentries without creating an update <strong>history</strong></li>
+  <li>Update histories can be huge, making them unmanageable by maintainers</li>
+</ul>
+
+<p><strong>NOTE: We aren’t teaching GitHub Desktop, so this won’t cover any possible GitHub Desktop solutions</strong></p>
+
+<h3 id="how-does-github-really-work-the-newbie-perspective">How does GitHub REALLY work? (The newbie perspective)</h3>
+
+<p><img src="img/Git-triangle.png" alt="The GIT Triangle" />
+<strong>The GIT Triangle</strong> (above) shows the three basic areas where you will perform work.</p>
+
+<ul>
+  <li>GitHub Online are your repositories on <a href="https://github.com/">GitHub</a></li>
+  <li>Carpentries represents The Carpentries lesson sites, or other sites where you contribute</li>
+  <li>Local Repos are kept on your personal computer, and accessed through a command prompt</li>
+</ul>
+
+<h3 id="basic-flow">Basic flow</h3>
+
+<p><strong>There is an order to this process</strong></p>
+<ul>
+  <li>The arrows are numbered to help guide you through a simple PR</li>
+  <li>Notice that this diagram uses arrows that are <strong>one way only</strong>. This is <strong><em>intentional</em></strong> and (IMHO) accurately represents the process</li>
+  <li>EDIT NOTE: The terms <em>origin</em> and <em>upstream</em> should be reversed according to convention. But they are okay for this lesson.</li>
+</ul>
+
+<h2 id="update-everything-using-branches">Update everything using branches</h2>
+<p><img src="img/Picture3.png" alt="The information flow 1" /></p>
+
+<p><strong>SHOWN ABOVE</strong> is how each basic area is divided into parts called branches
+Most of you know this, but this just illustrates which branches are being used when you are pushing and fetching.</p>
+
+<h2 id="steps">Steps</h2>
+<ul>
+  <li>Create a perfect copy of a Carpentries lesson (<em>e.g.</em> just downloaded or cloned). See detailed instructions for <a href="One-detailed-protocol-for-general-beginners">users</a> or <a href="One-detailed-protocol-for-beginner-maintainers">maintainers</a>. I’ll a page on <em>“OMG the maintainer asked me for a change/correction what can I do?”</em>, later.</li>
+</ul>
+
+<ol>
+  <li>Checkout (create) a new branch (My-branch) and make changes to the lesson on this branch</li>
+  <li>Push your changes to the same branch on your Github (upstream) repo</li>
+  <li>Create a Pull-request using the changed (My-branch) branch by pointing the PR to the Carpentries lesson.</li>
+  <li>Once your changes are approved, they will be merged to the gh-pages branch at The Carpentries</li>
+  <li>To keep everything up-to-date, Pull the new merged changes to your gh-pages on your local repo</li>
+  <li>Then Push your up-to-date gh-pages branch to your upstream gh-pages branch.</li>
+</ol>
+
+<p><strong>NOTES:</strong></p>
+<ul>
+  <li>Never do a “commit” to the gh-pages. <strong><em>Ever</em></strong>.</li>
+  <li>There is a reset step we will discuss later</li>
+  <li>Once the PR is merged on the Carpentries site, delete your My-branch locally and on GitHub</li>
+</ul>
+
+<p><strong>Now, you can make sure your repo is up to date with the Carpentries
+as described below and go ahead and make another new branch
+for your next contributions (if any)</strong></p>
+
+<h2 id="rationale-for-these-details-or-tldr">Rationale for these details or TL;DR</h2>
+
+<p>During active lesson updates, it is common for <strong><em>your online</em></strong> GitHub repos to fall behind 
+commits at the Carpentries. Updating your site incorrectly creates a HISTORY of the changes which 
+are included with your well-intentioned Pull Request. Included history is a nuisance
+There may be an automated way for these to be synced, but it’s mysterious (to me).</p>
+
+<p>After several attempts (like… two years), I found myself having to simply <strong>delete and 
+recreate</strong> my online AND my local repos (by forking and cloning) before making clean changes 
+on a branch, to offer as a PR to the Carpentries maintainer.  Being a maintainer 
+myself, it was common for multiple “other” action histories (adding files, changing files, 
+correcting mistakes, etc.) to be included in PRs.</p>
+
+<p>By asking how to easily create a clean Github repo for a PR on the maintainers Slack channel,</p>
+
+<p>Maxim Belkin gave a helpful reply: (Edited for continuity)</p>
+
+<blockquote>
+  <p>Use branches for pull requests:</p>
+
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout -f gh-pages
+git fetch origin
+git reset --hard origin/gh-pages
+git branch My-branch
+git checkout My-branch
+# make changes
+git add -u
+git commit -m ...
+git push &lt;your-fork&gt;
+# submit pull request using "My-branch" branch
+git checkout gh-pages
+</code></pre></div>  </div>
+
+  <p>then, if you need to make changes to your pull request:</p>
+
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout My-branch
+# make more changes
+git commit -am "message" # same as `git add -u` followed by `git commit -m`
+git push &lt;your fork&gt; # (&lt;your fork&gt; should be "your repo/My-branch", or sometimes just "git push" works)
+git checkout gh-pages
+</code></pre></div>  </div>
+
+  <p><code class="highlighter-rouge">git pull</code> is needed only to update the main branch (<code class="highlighter-rouge">gh-pages</code>) or when you’ve done changes to your 
+“My-branch” branch on GitHub via web interface and would like to pull them to your computer &lt;== <strong>this is important!</strong>
+<strong>Use <code class="highlighter-rouge">git fetch</code> instead; almost ALWAYS</strong>.</p>
+</blockquote>
+
+<p><em>Maxim’s advice worked!</em> (at least for my local repos)</p>
+
+<p><strong><em>But remote GitHub Repos being “ahead” or behind the Carpentries repos was still a problem</em></strong>.</p>
+
+<h2 id="heres-why">Here’s why:</h2>
+
+<p><em>I was trying to update my <code class="highlighter-rouge">gh-pages</code> with pull requests. Or, I was updating my local repos, then updating my online (github) repos, after doing a “commit” on the <code class="highlighter-rouge">gh-pages</code>. <strong>It was so sad!</strong></em></p>
+
+<p><em>If only I had heard (or probably remembered) someone telling me: “Never use commits on the gh-pages! Ever!”</em></p>
+
+<p><strong><em>So for beginners: “You do not need to, and probably should not ever, do a commit or a PR on the gh-pages branch of a repo, when you are a contributor or maintainer”</em></strong></p>
+
+<h2 id="what-might-confuse-a-beginner-using-github">What might confuse a beginner using GitHub</h2>
+
+<h3 id="common-or-easy-misconceptions-of-github-management">Common (or easy) misconceptions of GitHub Management:</h3>
+
+<ol>
+  <li>One sees something that is an issue</li>
+  <li>One notices their online repo is behind the Carpentries repo by two (or more or less) commits</li>
+  <li><strong>Instinct</strong> is to update your online GitHub repo <code class="highlighter-rouge">gh-pages</code> by just pulling changes from Carpentries, then merging them.</li>
+  <li><strong>Instinct</strong> is to use <code class="highlighter-rouge">gh-pages</code> so that the site will render correctly from your repo.</li>
+  <li><strong>This doesn’t work well</strong> because your online PR update from the Carpentries now shows up as a commit to your online repo (part of it’s “history”). You will always be “one commit ahead” of the Carpentries repo.</li>
+  <li><em>Any future PR from your repo will include the gh-pages update as a commit</em>.</li>
+</ol>
+
+<p><strong>Specific example:</strong> Looking at a comparison between repos, one Carpentries update pulled to an online GitHub repo included 2,048 additions and 1,617 deletions from earlier. This would then be sent, along with your <em>one</em> change, back to the maintainers!</p>
+
+<p><strong>Frustration:</strong> One can’t easily use the GitHub online GUI to fix the commit “history” of your repos <code class="highlighter-rouge">gh-pages</code> branch.</p>
+<ul>
+  <li>A history of any commits (pulls, pushes) to the <code class="highlighter-rouge">gh-pages</code> will become part of your lesson contributions to the Carpentries.</li>
+</ul>
+
+<p><strong>Problem:</strong> How does one get their online repo (specifically the <code class="highlighter-rouge">gh-pages</code>) up to date without unneeded commit history?</p>
+
+<p><strong>Disconnect:</strong> Experienced GIT-ers <strong><em>KNOW</em></strong> you don’t have to keep your contributor site remote online repo’s gh-pages branch updated <strong><em>at all</em></strong>. (Deep breath) But if you WANT to, it’s best done ONLY through your local repos (command line) and <em>never using a “commit” to the gh-pages branch</em>.</p>
+
+<p><strong>Answer:</strong> You <strong>must</strong> use the local repos, and the <code class="highlighter-rouge">fetch</code> at command line.</p>
+<ul>
+  <li>BONUS: Once this becomes easy, you <em>can</em> move changes onto your remote GitHub repo where they render properly.</li>
+  <li>CAUTION: Getting Ruby installed to run Jekyll for local rendering of the page can be HARD, but gives better error messages (Thanks to Ethan for demonstrating this)</li>
+</ul>
+
+<p>Here are two detailed protocols<a href="motivations_and_disclaimers">*</a>:</p>
+
+<ol>
+  <li>
+    <p><a href="One-detailed-protocol-for-beginners">For beginner contributors</a></p>
+  </li>
+  <li>
+    <p><a href="One-detailed-protocol-for-beginner-maintainers">For beginner maintainers</a></p>
+  </li>
+</ol>
+
+<p>After going through those protocols, and after everything is up to date and ready for any new changes, come back here for some insights into other potentially counfusing aspects of Github (and some solutions in shorter format).</p>
+
+<h3 id="a-simple-fix-for-a-common-problem-">A Simple Fix for a Common Problem <a name="fix"></a></h3>
+
+<p>If your upstream has some stupid commits you want to eliminate
+because they were pulls or pushes absentmindedly done on your <code class="highlighter-rouge">gh-pages</code> branch in your <code class="highlighter-rouge">upstream</code> repo.</p>
+<ul>
+  <li>First make your LOCAL repo up to date as specified above, then run this command:</li>
+</ul>
+
+<p><code class="highlighter-rouge">$ git push -f upstream gh-pages</code></p>
+
+<p>NOW your upstream GitHub will be <strong><em>forced</em></strong> to look like your local repo and
+will be up to date with the Carpentries gh-pages branch</p>
+
+<p><code class="highlighter-rouge">____________________________________________</code></p>
+
+<h3 id="deciphering-messages-for-beginners">Deciphering messages for beginners</h3>
+
+<p>Example:</p>
+
+<ol>
+  <li>Your local “shell-novice” repo is <strong><em>perfect</em></strong>, because you just fetched and reset it from The Carpentries.</li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout gh-pages
+git fetch origin
+git reset --hard origin/gh-pages
+</code></pre></div></div>
+
+<ol>
+  <li>Now you want to make your GitHub upstream repo perfect, so it will render properly. But when you try you get an error:</li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git push upstream
+To https://github.com/hoytpr/shell-novice
+ ! [rejected]        gh-pages -&gt; gh-pages (fetch first)
+error: failed to push some refs to 'https://github.com/hoytpr/shell-novice'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+</code></pre></div></div>
+
+<ol>
+  <li>Checking your status might make things even more confusing:</li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git status
+On branch gh-pages
+Your branch is up to date with 'origin/gh-pages'.     &lt;== Ahah! This is only true for "origin"!
+
+nothing to commit, working tree clean                 &lt;== But it sure looks like everything is fine!
+
+</code></pre></div></div>
+
+<ol>
+  <li>
+    <p>When you open your browser and check your GitHub online repo it reports something like:</p>
+
+    <p><code class="highlighter-rouge">"This is 2 commits behind swcarpentry:gh-pages"</code>         &lt;==  This is true for gh-pages!!!!!</p>
+  </li>
+  <li>
+    <p>To decipher where the problem is change branches locally and compare to upstream (not origin) using <code class="highlighter-rouge">git diff</code>.</p>
+  </li>
+</ol>
+
+<p>For Example: (NOTE this is only an example)</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git checkout My-branch
+Switched to branch 'My-branch'
+$ git diff upstream/My-branch
+</code></pre></div></div>
+
+<p>(nothing is returned = no differences! So now you change to <code class="highlighter-rouge">gh-pages</code> branch)</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git checkout gh-pages
+Switched to branch 'gh-pages'
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> git diff upstream/gh-pages
+<span class="gh">diff --git a/aio.md b/aio.md		&lt;== now you see differences!
+index 6d93852..a91fb0f 100644
+</span><span class="gd">--- a/aio.md
+</span><span class="gi">+++ b/aio.md
+</span><span class="p">@@ -1,6 +1,6 @@</span>
+ ---
+<span class="gd">-layout: page
+-permalink: /aio/
+</span><span class="gi">+layout: page
++title: Aio
+</span> ---
+ &lt;script&gt;
+   window.onload = function() {
+<span class="gh">diff --git a/reference.md b/reference.md
+index 87a20cc..6260be6 100644
+</span><span class="gd">--- a/reference.md
+&lt;snip&gt;&lt;/snip&gt; etc.
+</span></code></pre></div></div>
+
+<ol>
+  <li>To <strong><em>fix differences</em></strong> in your upstream <code class="highlighter-rouge">gh-pages</code> branch you can FORCE (<code class="highlighter-rouge">-f</code>) the push upstream to that branch. This obliterates differences (<strong>good or bad</strong>) between your local repos, and your Github (online) repos.</li>
+</ol>
+
+<h1 id="just-make-sure-you-dont-do-this-to-a-carpentries-repo-if-you-are-a-maintainer-with-write-privledges">Just make sure you don’t do this to a Carpentries repo if you are a maintainer with write privledges!!!</h1>
+
+<p>Example:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git push -f upstream gh-pages
+Enumerating objects: 179, done.
+Counting objects: 100% (176/176), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (58/58), done.
+Writing objects: 100% (157/157), 24.52 KiB | 4.09 MiB/s, done.
+Total 157 (delta 111), reused 145 (delta 99)
+remote: Resolving deltas: 100% (111/111), completed with 15 local objects.
+To https://github.com/hoytpr/shell-novice
+ + c4ba13b...ff68e20 gh-pages -&gt; gh-pages (forced update)
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>Then go to the GitHub online repo and refresh the screen. It’ll say:</p>
+
+    <p><code class="highlighter-rouge">"This branch is even with swcarpentry:gh-pages."</code></p>
+  </li>
+</ul>
+
+<h3 id="imposter-syndrome-intensity-should-now-be-reduced">Imposter syndrome intensity should now be reduced!</h3>
+<p><a href="https://hoytpr.github.io/git_beginner/">&lt; Readme (home)</a></p>
+:ET

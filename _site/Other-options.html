@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Beginner Git for Maintainers | [&#8220;Git for Beginner Maintainers&#8221;]</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Beginner Git for Maintainers" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A Maintainers Help Page" />
+<meta property="og:description" content="A Maintainers Help Page" />
+<link rel="canonical" href="http://localhost:4000/Other-options.html" />
+<meta property="og:url" content="http://localhost:4000/Other-options.html" />
+<meta property="og:site_name" content="[&#8220;Git for Beginner Maintainers&#8221;]" />
+<script type="application/ld+json">
+{"description":"A Maintainers Help Page","@type":"WebPage","url":"http://localhost:4000/Other-options.html","headline":"Beginner Git for Maintainers","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="http://localhost:4000/">Git for Beginner Maintainers</a></h1>
+      
+
+      <p><a href="https://hoytpr.github.io/git_beginner/Maintaining-for-beginners-narrative1">&lt; Go Back</a></p>
+
+<h3 id="other-possible-solutions-found-online">Other possible solutions found online:</h3>
+
+<p><strong>Great writeup by @sethrobertson <a href="https://sethrobertson.github.io/GitFixUm/fixup.html">On undoing, fixing, or removing commits in git</a></strong></p>
+
+<p><strong>Another great writeup by <a href="https://www.tim-dennis.com/swc/2016/07/25/contributing-carpentries.html">Tim Dennis at UCLA</a></strong></p>
+
+<p><strong>Great writeup by <a href="https://github.com/dmgt/swc_github_flow/blob/master/for_novice_contributors.md">@dmgt on GitHub</a></strong></p>
+
+<p><strong>Any more good writeups can be included here!</strong></p>
+
+<h2 id="some-simple-command-sets-found-online">Some simple command sets found online</h2>
+
+<p><strong>Example 1</strong></p>
+
+<p>Steps to clear out the history of a local git/github repository</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git-clearHistory
+-- Remove the history from the repo 
+rm -rf .git
+-- recreate the repos from the current content only
+git init
+git add .
+git commit -m "Initial commit"
+
+-- push to the github remote repos and overwrite history. Might have to `git remote rm origin` if origin exists
+git remote add origin git@github.com:&lt;YOUR ACCOUNT&gt;/&lt;YOUR REPOS&gt;.git
+git push -u --force origin master
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">_____________________________________</code></p>
+
+<p><strong>Example2</strong></p>
+
+<p>Note: This might be problematic with repositories with git submodules.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout --orphan newBranch
+git add -A  # Add all files and commit them
+git commit
+git branch -D master  # Deletes the master branch
+git branch -m master  # Rename the current branch to master
+git push -f origin master  # Force push master branch to github
+git gc --aggressive --prune=all     # remove the old files
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">____________________________________</code></p>
+
+<p><strong>Example3</strong></p>
+
+<p>“Example1 didn’t work but the following worked with more attributes during the push.”</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git init
+git add .
+git commit -m 'Initial commit' 
+git remote rm origin 
+git remote add origin [repo_address]
+git push --mirror --force
+</code></pre></div></div>
+
+<p>Just a small comment :
+rm -rf .git &lt;—— use this command from git bash.. NOT dos command prompt</p>
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+    
+  </body>
+</html>

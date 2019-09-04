@@ -1,0 +1,282 @@
+I"x-<h2 id="one-detailed-protocol-for-beginner-maintainers">One Detailed Protocol for Beginner Maintainers:</h2>
+
+<ul>
+  <li><strong>Primary rule: Never “commit” a change to the <code class="highlighter-rouge">gh-pages</code> branch. <em>Ever</em></strong>.
+    <ul>
+      <li>Maintainers only change the <code class="highlighter-rouge">gh-pages</code> branch by merging PRs.</li>
+    </ul>
+  </li>
+  <li><strong>Secondary rule: Create an “Issue” before sending a substantial PR</strong>
+    <ul>
+      <li>Exceptions are for typos</li>
+    </ul>
+  </li>
+  <li><strong>Tertiary rule: Never merge your own PR</strong>
+    <ul>
+      <li>No exceptions!
+        <ul>
+          <li><em>Except</em> if no other maintainers are participating</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="steps">Steps:</h3>
+
+<ul>
+  <li>Open GitBash or a Terminal window (This assumes “Git” is installed)
+    <ul>
+      <li>If creating a new repo, create the directory using <code class="highlighter-rouge">mkdir</code>, then <code class="highlighter-rouge">cd</code> into the directory, and run <code class="highlighter-rouge">git init</code> to initialize.</li>
+    </ul>
+  </li>
+  <li>New maintainers should clone the repo you will be maintaining to your local computer
+    <ul>
+      <li>Example: <code class="highlighter-rouge">git clone https://github.com/datacarpentry/wrangling-genomics</code></li>
+      <li>Generic example: <code class="highlighter-rouge">git clone https://github.com/&lt;organization&gt;/&lt;repo-name&gt;</code></li>
+    </ul>
+  </li>
+  <li>Check your remote connection
+    <ul>
+      <li><code class="highlighter-rouge">git remote -v</code>
+        <ul>
+          <li>Should see something like:
+            <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote -v
+origin  https://github.com/datacarpentry/wrangling-genomics.git (fetch)
+origin  https://github.com/datacarpentry/wrangling-genomics.git (push)
+</code></pre></div>            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Check which branches exist:</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git branch
+* gh-pages
+</code></pre></div></div>
+<ul>
+  <li>Delete any branches except <code class="highlighter-rouge">gh-pages</code>
+    <ul>
+      <li>Example: <code class="highlighter-rouge">git branch -D my-branch</code></li>
+      <li>Generic example: <code class="highlighter-rouge">git branch -D &lt;not-gh-pages&gt;</code></li>
+    </ul>
+  </li>
+  <li>Always update your existing local repo.
+    <ul>
+      <li>This may not be needed if you just now cloned the repo, but do it anyway</li>
+      <li>Example: <code class="highlighter-rouge">git fetch origin</code>
+        <ul>
+          <li>Note that <code class="highlighter-rouge">origin</code> is the “alias” for your <strong>remote</strong> repo at the carpentries, and was set up automagically when you cloned the repo.
+            <ul>
+              <li>(There is no generic example. Type <code class="highlighter-rouge">git fetch origin</code>)</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Connect to <strong>your personal</strong> github repo with the same name
+    <ul>
+      <li>Example:
+        <ul>
+          <li><code class="highlighter-rouge">git remote add upstream https://github.com/hoytpr/wrangling-genomics</code></li>
+        </ul>
+      </li>
+      <li>Generic example:
+        <ul>
+          <li><code class="highlighter-rouge">git remote add upstream https://github.com/&lt;your-github-username&gt;/&lt;repo-name&gt;</code></li>
+        </ul>
+      </li>
+      <li>NOTE: You are connecting to your <strong>remote</strong> repo, AND you are assigning  <code class="highlighter-rouge">upstream</code> as the “alias” for that repo.</li>
+    </ul>
+  </li>
+  <li>Check your remote connections again
+    <ul>
+      <li>git remote -v
+        <ul>
+          <li>Should see something like:</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote -v
+origin  https://github.com/datacarpentry/wrangling-genomics.git (fetch)
+origin  https://github.com/datacarpentry/wrangling-genomics.git (push)
+upstream        https://github.com/hoytpr/wrangling-genomics.git (fetch)
+upstream        https://github.com/hoytpr/wrangling-genomics.git (push)
+</code></pre></div></div>
+<ul>
+  <li>Generic example:</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote -v
+origin  https://github.com/&lt;organization&gt;/&lt;repo-name&gt;.git (fetch)
+origin  https://github.com/&lt;organization&gt;/&lt;repo-name&gt;.git (push)
+upstream        https://github.com/&lt;your-github-username&gt;/&lt;repo-name&gt;.git (fetch)
+upstream        https://github.com/&lt;your-github-username&gt;/&lt;repo-name&gt;.git (push)
+</code></pre></div></div>
+
+<!--
+
+- Setup the remote "origin" to a Carpentries repo, for example the "wrangling-genomics"
+
+`git remote add origin https://github.com/datacarpentry/wrangling-genomics`
+
+- check the remote origin is correct
+
+```
+git remote -v
+origin  https://github.com/datacarpentry/wrangling-genomics.git (fetch)
+origin  https://github.com/datacarpentry/wrangling-genomics.git (push)
+```
+
+- Setup the remote "upstream" as **your** remote GitHub repo
+
+`git remote add upstream https://github.com/hoytpr/wrangling-genomics`
+
+- check the remote upstream is correct
+
+```
+git remote -v
+origin  https://github.com/datacarpentry/wrangling-genomics.git (fetch)
+origin  https://github.com/datacarpentry/wrangling-genomics.git (push)
+upstream        https://github.com/hoytpr/wrangling-genomics.git (fetch)
+upstream        https://github.com/hoytpr/wrangling-genomics.git (push)
+
+```
+
+- Make sure you have a "gh-pages" branch and a branch for making changes and PRs
+
+```
+$ git branch
+* gh-pages
+  My-branch
+```
+
+-->
+
+<ul>
+  <li>You MUST have a <code class="highlighter-rouge">gh-pages branch</code> (and probably do).</li>
+  <li>If you don’t have a <code class="highlighter-rouge">gh-pages</code> branch, or a different branch for making changes (in this example it’s named ‘My-branch’) you can create one. For example:</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git checkout -b My-branch
+Switched to a new branch 'My-branch'
+</code></pre></div></div>
+
+<ul>
+  <li>Make <em>sure</em> you made the branch correctly.</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git branch
+  gh-pages
+* My-branch
+</code></pre></div></div>
+
+<ul>
+  <li>NOTE: The asterisk indicates you are on the new <code class="highlighter-rouge">My-branch</code> branch and are NOT on the <code class="highlighter-rouge">gh-pages</code> branch.</li>
+</ul>
+
+<p><em>*NOW*</em> Use Max Belkims advice:</p>
+
+<blockquote>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout -f gh-pages
+git fetch origin
+git reset --hard origin/gh-pages
+git branch
+   gh-pages
+   My-branch
+git checkout My-branch
+# make changes
+git add -u
+git commit -m ...       &lt;== add commit message here
+git push upstream https://github.com/hoytpr/wrangling-genomics
+# submit pull request to The Carpentries using "My-branch" branch      &lt;== using your **online** GUI
+git checkout gh-pages
+</code></pre></div>  </div>
+</blockquote>
+
+<h3 id="remember">Remember:</h3>
+<ul>
+  <li>ALWAYS make changes to the Carpentries lesson using the command-line on <strong>your local</strong> repo using a new branch like <code class="highlighter-rouge">My-branch</code> (not gh-pages)</li>
+  <li>Push changes to same <code class="highlighter-rouge">My-branch</code> (not gh-pages) of <strong>your online</strong> GitHub repo (your <strong><em>remote</em></strong> repo)</li>
+  <li>Send in PR (to Carpentries lesson site) from <strong>your remote</strong> Github repo (the GUI) using <code class="highlighter-rouge">My-branch</code> or similar named branch (but <strong>NOT</strong> <code class="highlighter-rouge">gh-pages</code>)</li>
+  <li>When accepted by another maintainer and merged, <strong>delete your</strong> My-branch (at SWC lesson site)</li>
+  <li>(Deleting your branch which will show as an option on the PRs tab of the Carpentries lesson after merging.)</li>
+</ul>
+
+<h3 id="to-clean-things-up">To clean things up</h3>
+<ul>
+  <li>Go back to local command line</li>
+</ul>
+
+<p>The remote setup should still look like this:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git remote -v
+origin  https://github.com/datacarpentry/wrangling-genomics (fetch)
+origin  https://github.com/datacarpentry/wrangling-genomics (push)
+upstream        https://github.com/hoytpr/wrangling-genomics (fetch)
+upstream        https://github.com/hoytpr/wrangling-genomics (push)
+</code></pre></div></div>
+
+<p>Clean up the local repo by deleting ALL other branches (FYI: To delete a branch; first switch to a different branch, then use <code class="highlighter-rouge">-D</code>)</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git checkout gh-pages
+Switched to branch 'gh-pages'
+$ git branch -D My-branch
+Deleted branch My-branch (was 3a0742a).
+</code></pre></div></div>
+
+<p><strong>Fetch</strong> the new Carpentries lesson and <strong>reset</strong> your gh-pages branch</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout gh-pages
+git fetch origin
+git reset --hard origin/gh-pages
+</code></pre></div></div>
+
+<p>Then push the new lesson up to your online Github repo</p>
+
+<p><code class="highlighter-rouge">git push upstream</code></p>
+
+<p>Then make a <strong>new</strong> local branch for future changes</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout -b new-branch
+Switched to a new branch 'new-branch'
+git push --set-upstream origin new-branch
+</code></pre></div></div>
+
+<p>Your <strong>new</strong> branch will be exactly like the updated <code class="highlighter-rouge">gh-pages</code> branch. 
+NOW everything should be up to date and ready for new changes.</p>
+
+<h2 id="a-common-problem-">A Common Problem <a name="wrong-ahead"></a></h2>
+
+<ul>
+  <li>
+    <p>If your upstream <code class="highlighter-rouge">gh-pages</code> branch has some commits generated online using the Github interface, you will need to eliminate them! This is <strong><em>important</em></strong> for beginner maintainers. Commits to <code class="highlighter-rouge">gh-pages</code> in your Github repo always stay “ahead” of the Carpentries repo you are maintaining.</p>
+  </li>
+  <li>
+    <p>This can also happen if you are working on your local repo and <strong>commit</strong> a change while in the <code class="highlighter-rouge">gh-pages</code> branch.</p>
+  </li>
+</ul>
+
+<!--
+
+This is also why contributors should submit PRs without using the gh-pages branch.
+Until you are able to easily render your sites locally using Jekyll, it is ***best to use a new branch for every commit***. This is why:
+
+-->
+
+<h2 id="a-simple-fix-when-gh-pages-are-ahead">A Simple Fix when gh-pages are “ahead”</h2>
+
+<ul>
+  <li>First make your LOCAL repo up to date as specified above, then run this command:</li>
+</ul>
+
+<p><code class="highlighter-rouge">$ git push -f upstream gh-pages</code></p>
+
+<p>NOW your upstream GitHub will be <strong><em>forced</em></strong> to look like your local repo and
+will be up to date with SWC gh-pages</p>
+:ET

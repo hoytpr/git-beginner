@@ -1,0 +1,64 @@
+I"]
+<p><a href="https://hoytpr.github.io/git_beginner/Maintaining-for-beginners-narrative1">&lt; Go Back</a></p>
+
+<h3 id="other-possible-solutions-found-online">Other possible solutions found online:</h3>
+
+<p><strong>Great writeup by @sethrobertson <a href="https://sethrobertson.github.io/GitFixUm/fixup.html">On undoing, fixing, or removing commits in git</a></strong></p>
+
+<p><strong>Another great writeup by <a href="https://www.tim-dennis.com/swc/2016/07/25/contributing-carpentries.html">Tim Dennis at UCLA</a></strong></p>
+
+<p><strong>Great writeup by <a href="https://github.com/dmgt/swc_github_flow/blob/master/for_novice_contributors.md">@dmgt on GitHub</a></strong></p>
+
+<p><strong>Any more good writeups can be included here!</strong></p>
+
+<h2 id="some-simple-command-sets-found-online">Some simple command sets found online</h2>
+
+<p><strong>Example 1</strong></p>
+
+<p>Steps to clear out the history of a local git/github repository</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git-clearHistory
+-- Remove the history from the repo 
+rm -rf .git
+-- recreate the repos from the current content only
+git init
+git add .
+git commit -m "Initial commit"
+
+-- push to the github remote repos and overwrite history. Might have to `git remote rm origin` if origin exists
+git remote add origin git@github.com:&lt;YOUR ACCOUNT&gt;/&lt;YOUR REPOS&gt;.git
+git push -u --force origin master
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">_____________________________________</code></p>
+
+<p><strong>Example2</strong></p>
+
+<p>Note: This might be problematic with repositories with git submodules.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout --orphan newBranch
+git add -A  # Add all files and commit them
+git commit
+git branch -D master  # Deletes the master branch
+git branch -m master  # Rename the current branch to master
+git push -f origin master  # Force push master branch to github
+git gc --aggressive --prune=all     # remove the old files
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">____________________________________</code></p>
+
+<p><strong>Example3</strong></p>
+
+<p>“Example1 didn’t work but the following worked with more attributes during the push.”</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git init
+git add .
+git commit -m 'Initial commit' 
+git remote rm origin 
+git remote add origin [repo_address]
+git push --mirror --force
+</code></pre></div></div>
+
+<p>Just a small comment :
+rm -rf .git &lt;—— use this command from git bash.. NOT dos command prompt</p>
+:ET

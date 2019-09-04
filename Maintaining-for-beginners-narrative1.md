@@ -6,10 +6,10 @@ questions:
 - "How to send a properly formatted PR to a Carpentries Lesson?"
 ---
 
-[< Readme (home)](https://hoytpr.github.io/git_beginner/)
+[Readme (home)]({{ site.baseurl }}/)
 
 ### Disclaimer:
-- There are [other ways](https://hoytpr.github.io/git_beginner/Other-options) to do this, but a simple, consistent way needs to be spelled out. This is my suggestion. Some say that "revert" rather than "reset" is a better option but this is simple and works. If you know a better option, that's GREAT! Let's please put all good options here then on the Carpentries site.
+- There are [other ways]({{ site.baseurl }}/Other-options) to do this, but a simple, consistent way needs to be spelled out. This is my suggestion. Some say that "revert" rather than "reset" is a better option but this is simple and works. If you know a better option, that's GREAT! Let's please put all good options here then on the Carpentries site.
 
 ### objectives: ###
 - Describe exact commands to sync a personal online (GitHub copy of) a Carpentries Workshop.
@@ -51,7 +51,7 @@ questions:
 Most of you know this, but this just illustrates which branches are being used when you are pushing and fetching.  
 
 ## Steps ##
-- Create a perfect copy of a Carpentries lesson (*e.g.* just downloaded or cloned). See detailed instructions for [users](One-detailed-protocol-for-general-beginners) or [maintainers](One-detailed-protocol-for-beginner-maintainers). I'll a page on *"OMG the maintainer asked me for a change/correction what can I do?"*, later.
+- Create a perfect copy of a Carpentries lesson (*e.g.* just downloaded or cloned). See detailed instructions for [users](One-detailed-protocol-for-beginners) or [maintainers](One-detailed-protocol-for-beginner-maintainers). I'll put up a page on *"OMG the maintainer asked me for a change/correction what can I do?"*, later.
 
 1. Checkout (create) a new branch (My-branch) and make changes to the lesson on this branch
 2. Push your changes to the same branch on your Github (upstream) repo
@@ -150,11 +150,11 @@ Maxim Belkin gave a helpful reply: (Edited for continuity)
 
 **Answer:** You **must** use the local repos, and the `fetch` at command line. 
 - BONUS: Once this becomes easy, you *can* move changes onto your remote GitHub repo where they render properly. 
-- CAUTION: Getting Ruby installed to run Jekyll for local rendering of the page can be HARD, but gives better error messages (Thanks to Ethan for demonstrating this)
+- CAUTION: Getting Ruby installed to run Jekyll for local rendering of the page can be **HARD**, but gives better error messages (Thanks to Ethan for demonstrating this)
 
-Here are two detailed protocols[\*](motivations_and_disclaimers):
+Here are two detailed protocols[\*]({{ site.baseurl }}/motivations_and_disclaimers):
 
-1. [For beginner contributors](One-detailed-protocol-for-beginners)
+1. [For beginner contributors]({{ site.baseurl }}/One-detailed-protocol-for-beginners)
 
 2. [For beginner maintainers](One-detailed-protocol-for-beginner-maintainers)
 
@@ -177,7 +177,7 @@ will be up to date with the Carpentries gh-pages branch
 
 Example:
 
-1. Your local "shell-novice" repo is ***perfect***, because you just fetched and reset it from The Carpentries.
+1\. Your local "shell-novice" repo is ***perfect***, because you just fetched and reset it from The Carpentries.
 
 ```
 git checkout gh-pages
@@ -185,7 +185,7 @@ git fetch origin
 git reset --hard origin/gh-pages
 ```
 
-2. Now you want to make your GitHub upstream repo perfect, so it will render properly. But when you try you get an error: 
+2\. Now you want to make your GitHub upstream repo perfect, so it will render properly. But when you try you get an error: 
 
 ```
 $ git push upstream
@@ -199,7 +199,7 @@ hint: (e.g., 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 
-3. Checking your status might make things even more confusing: 
+3\. Checking your status might make things even more confusing: 
 
 ```
 $ git status
@@ -210,11 +210,11 @@ nothing to commit, working tree clean                 <== But it sure looks like
 
 ```
 
-4. When you open your browser and check your GitHub online repo it reports something like:
+4\. When you open your browser and check your GitHub online repo it reports something like:
 
-	`"This is 2 commits behind swcarpentry:gh-pages"`         <==  This is true for gh-pages!!!!!
+`"This is 2 commits behind swcarpentry:gh-pages"`         <==  This is true for gh-pages!!!!!
 
-5. To decipher where the problem is change branches locally and compare to upstream (not origin) using `git diff`. 
+5\. To find the problem you can change branches locally and compare to your upstream (not origin) using `git diff`. 
 
 For Example: (NOTE this is only an example)
 
@@ -223,11 +223,14 @@ $ git checkout My-branch
 Switched to branch 'My-branch'
 $ git diff upstream/My-branch
 ```
-                                   <== nothing is returned = no differences! So now you change to `gh-pages` branch
+
+(nothing is returned = no differences! So now you change to `gh-pages` branch)
+
 ```
 $ git checkout gh-pages
 Switched to branch 'gh-pages'
 ```
+
 ```
 $ git diff upstream/gh-pages
 diff --git a/aio.md b/aio.md		<== now you see differences!
@@ -246,14 +249,13 @@ index 6d93852..a91fb0f 100644
 diff --git a/reference.md b/reference.md
 index 87a20cc..6260be6 100644
 --- a/reference.md
-<snip></snip> etc.
 ```
 
-6. To ***fix differences*** in your upstream `gh-pages` branch you can FORCE (`-f`) the push upstream to that branch. This obliterates differences (**good or bad**) between your local repos, and your Github (online) repos. 
+etc.
 
-# Just make sure you don't do this to a Carpentries repo if you are a maintainer with write privledges!!!
+6\. To ***fix differences*** in your upstream `gh-pages` branch you can FORCE (using `-f`) the push upstream to that branch. This obliterates differences (**good or bad**) between your local repos, and your Github (online) repos. 
 
-Example:
+Forced Update Example:
 
 ```
 $ git push -f upstream gh-pages
@@ -268,9 +270,9 @@ To https://github.com/hoytpr/shell-novice
  + c4ba13b...ff68e20 gh-pages -> gh-pages (forced update)
 ```
 
-- Then go to the GitHub online repo and refresh the screen. It'll say:
+7\. Then go to the GitHub online repo and refresh the screen. It'll say:
 
-	`"This branch is even with swcarpentry:gh-pages."`
+`"This branch is even with swcarpentry:gh-pages."`
 
 ### Imposter syndrome intensity should now be reduced!
-[< Readme (home)](https://hoytpr.github.io/git_beginner/)
+[Readme (home)]({{ site.baseurl }}/)

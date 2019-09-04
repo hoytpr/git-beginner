@@ -8,13 +8,14 @@ questions:
 key-points:
 - "The detailed protocol"
 ---
+[Readme (home)]({{ site.baseurl }}/)
 
 ## One Detailed Protocol for Beginners: 
 
 - **Primary rule: Never "commit" a change to the `gh-pages` branch. *Ever***.
 	- Maintainers only change the `gh-pages` branch by merging PRs.
 - **Secondary rule: Create an "Issue" before sending a substantial PR**
-	- Exceptions are for typos
+	- Exception: PRs can be sent immediately for obvious typos
 - **Tertiary rule: Be patient**
 	- No exceptions!
 
@@ -38,6 +39,7 @@ origin  https://github.com/datacarpentry/wrangling-genomics.git (push)
 ```
 $ git branch
 * gh-pages
+ my-branch
 ```
 - When beginning, it's best to delete any branches except `gh-pages`
 	- Example: `git branch -D my-branch`
@@ -47,7 +49,7 @@ $ git branch
 	- This may not be needed if you just now cloned the repo, but do it anyway
 	- Example: `git fetch origin`
 		- Note that `origin` is the "alias" for your **remote** repo at the carpentries, and was set up automagically when you cloned the repo.
-			- (There is no generic example. Type `git fetch origin`)
+	- (There is no generic example. Type `git fetch origin`)
 - Connect to **your personal** github repo with the same name
 	- Example:
 		- `git remote add upstream https://github.com/hoytpr/wrangling-genomics`
@@ -146,13 +148,12 @@ _*NOW*_ To create a clean PR, use Max Belkims advice:
 > git add -u                <== NOTE that 'git add .' will be deprecated
 > git commit -m "..."       <== add commit message here
 > git push upstream https://github.com/hoytpr/wrangling-genomics
-> # submit pull request to The Carpentries using "My-branch" branch      <== using your **online** GUI
-> git checkout gh-pages
+> # submit pull request to The Carpentries using "My-branch" branch using your **online** GUI
 > ```
 
 ### Remember:
-- ALWAYS make changes to the Carpentries lesson using the command-line on **your local** repo using a new branch like `My-branch` (not gh-pages)
-- Push changes to same `My-branch` (not gh-pages) of **your online** GitHub repo (your ***remote*** repo)
+- ALWAYS make changes to the Carpentries lesson using the command-line on **your local** repo using a new branch like `My-branch` (not `gh-pages`)
+- Push changes to same `My-branch` (not `gh-pages`) of **your online** GitHub repo (your ***remote*** repo)
 - Create an "Issue" on the Carpentries lesson site before you contribute a PR, and WAIT for a maintainer to respond
 - After maintainer(s) approve, send in a PR (to Carpentries lesson site) from **your remote** Github repo (the GUI) using `My-branch` or similarly named branch (but **NOT** `gh-pages`)
 - When accepted by a maintainer and merged, **delete your** `My-branch`
@@ -214,10 +215,10 @@ NOW everything should be up to date and ready for new changes.
 
 - This can also happen if you are working on your local repo and **commit** a change while in the `gh-pages` branch. 
 
-- This is also why contributors should submit PRs without using the gh-pages branch.
+- This is also why contributors should submit PRs without using the `gh-pages` branch.
 
 
-## A Simple Fix when gh-pages are "ahead" 
+## A Simple Fix when `gh-pages` are "ahead" 
 
 - First make sure your LOCAL repo up to date as specified above.
 - Then make sure your remote repository has the alias "upstream"
@@ -235,6 +236,6 @@ Then run this command:
 `$ git push -f upstream gh-pages`
 
 NOW your remote (upstream) GitHub repo will be ***forced*** to look like your local repo and
-will be up to date with SWC gh-pages
+will be up to date with the Carpentries gh-pages
 
-
+[Readme (home)]({{ site.baseurl }}/)

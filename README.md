@@ -1,3 +1,7 @@
+---
+
+---
+
 # git-beginner
 Maintainers have hard times with improperly formatted lesson PRs
 

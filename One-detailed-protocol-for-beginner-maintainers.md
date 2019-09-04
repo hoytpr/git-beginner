@@ -9,6 +9,8 @@ key-points:
 - "The detailed protocol"
 ---
 
+[Readme (home)]({{ site.baseurl }}/)
+
 ## One Detailed Protocol for Beginner Maintainers: 
 
 - **Primary rule: Never "commit" a change to the `gh-pages` branch. *Ever***.
@@ -39,6 +41,7 @@ origin  https://github.com/datacarpentry/wrangling-genomics.git (push)
 ```
 $ git branch
 * gh-pages
+ my-branch
 ```
 - Delete any branches except `gh-pages`
 	- Example: `git branch -D my-branch`
@@ -147,15 +150,14 @@ _*NOW*_ Use Max Belkims advice:
 > git add -u
 > git commit -m ...       <== add commit message here
 > git push upstream https://github.com/hoytpr/wrangling-genomics
-> # submit pull request to The Carpentries using "My-branch" branch      <== using your **online** GUI
-> git checkout gh-pages
+> # submit pull request to The Carpentries using "My-branch" branch using your **online** GUI
 > ```
 
 ### Remember:
-- ALWAYS make changes to the Carpentries lesson using the command-line on **your local** repo using a new branch like `My-branch` (not gh-pages)
-- Push changes to same `My-branch` (not gh-pages) of **your online** GitHub repo (your ***remote*** repo)
+- ALWAYS make changes to the Carpentries lesson using the command-line on **your local** repo using a new branch like `My-branch` (not `gh-pages`)
+- Push changes to same `My-branch` (not `gh-pages`) of **your online** GitHub repo (your ***remote*** repo)
 - Send in PR (to Carpentries lesson site) from **your remote** Github repo (the GUI) using `My-branch` or similar named branch (but **NOT** `gh-pages`)
-- When accepted by another maintainer and merged, **delete your** My-branch (at SWC lesson site)
+- When accepted by another maintainer and merged, **delete your** My-branch (at the Carpentries lesson site)
 - (Deleting your branch which will show as an option on the PRs tab of the Carpentries lesson after merging.)
 
 ### To clean things up
@@ -208,14 +210,16 @@ NOW everything should be up to date and ready for new changes.
 
 - This can also happen if you are working on your local repo and **commit** a change while in the `gh-pages` branch. 
 
-<!--
+- It is possible that the number of contributors that use the `gh-pages` branch, rather than 
+submit PRs using a different branch, is because they are not aware of, or skilled in, this process, 
+it becomes frustrating, and in the rush to contribute, 
+they simply use the `gh-pages` of their online Github repos.
+	- As a *compounding* problem, their first PR is met with a rejection by the maintainers 
+	for not using the `gh-pages` branch! 
 
-This is also why contributors should submit PRs without using the gh-pages branch.
-Until you are able to easily render your sites locally using Jekyll, it is ***best to use a new branch for every commit***. This is why:
+- Teaching about `patches` might help.
 
--->
-
-## A Simple Fix when gh-pages are "ahead" 
+## A Simple Fix when `gh-pages` are "ahead" 
 
 - First make your LOCAL repo up to date as specified above, then run this command: 
 
@@ -223,3 +227,6 @@ Until you are able to easily render your sites locally using Jekyll, it is ***be
 
 NOW your upstream GitHub will be ***forced*** to look like your local repo and
 will be up to date with SWC gh-pages
+
+
+[Readme (home)]({{ site.baseurl }}/)
