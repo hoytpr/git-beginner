@@ -1,11 +1,18 @@
 ---
 ---
 
-Maintainers have hard times with improperly formatted lesson PRs
+**Primary Issue Addressed**
+
+*Maintainers are consistently presented with improperly formatted lesson PRs.
+They also find (as new maintainers) that when using their remote forked copies of the
+Carpentries repos, they are "behind" or "ahead" of the original Carpentries repo.
+This makes it difficult to visualize the exact rendering of the lessons they
+are maintaining.*
 
 These pages contain information about the process for making a clean, up-to-date repo.
 
-This also has a little about how GitHub really works just to help beginners.
+This also has a little about how the GitHub really works from a beginner perspective, 
+and just to help beginners. *It may help experienced users understand the beginners.*
 
 Protocols: 
 1. [Clean Git for maintainers and beginners]({{ site.baseurl }}/Maintaining-for-beginners-narrative1).
