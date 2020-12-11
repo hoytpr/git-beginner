@@ -271,4 +271,4 @@ To https://github.com/hoytpr/shell-novice
 `"This branch is even with swcarpentry:gh-pages."`
 
 ### Imposter syndrome intensity should now be reduced!
-[Readme (home)](./)
+[Readme (home)](./README.md)
