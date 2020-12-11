@@ -47,7 +47,7 @@
 Most of you know this, but this just illustrates which branches are being used when you are pushing and fetching.  
 
 ## Steps ##
-- Create a perfect copy of a Carpentries lesson (*e.g.* just downloaded or cloned). See detailed instructions for [users](One-detailed-protocol-for-beginners) or [maintainers](One-detailed-protocol-for-beginner-maintainers). I'll put up a page on *"OMG the maintainer asked me for a change/correction what can I do?"*, later.
+- Create a perfect copy of a Carpentries lesson (*e.g.* just downloaded or cloned). See detailed instructions for [users](./One-detailed-protocol-for-beginners.md) or [maintainers](./One-detailed-protocol-for-beginner-maintainers.md). I'll put up a page on *"OMG the maintainer asked me for a change/correction what can I do?"*, later.
 
 1. Checkout (create) a new branch (My-branch) and make changes to the lesson on this branch
 2. Push your changes to the same branch on your Github (upstream) repo
