@@ -1,6 +1,7 @@
 ---
 
 ---
+[Readme (home)](./)
 
 ### These are some discussion items that could be useful. 
 
