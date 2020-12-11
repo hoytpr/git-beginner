@@ -2,7 +2,7 @@
 
 ---
 
-[Readme (home)]({{ site.baseurl }}/)
+[Readme (home)](./README.md)
 
 ## One Detailed Protocol for Beginner Maintainers: 
 
@@ -222,4 +222,4 @@ NOW your upstream GitHub will be ***forced*** to look like your local repo and
 will be up to date with SWC gh-pages
 
 
-[Readme (home)]({{ site.baseurl }}/)
+[Readme (home)](./README.md)
