@@ -5,7 +5,7 @@
 [Readme (home)]({{ site.baseurl }}/)
 
 ### Disclaimer:
-- There are [other ways](/Other-options) to do this, but a simple, consistent way needs to be spelled out. This is my suggestion. Some say that "revert" rather than "reset" is a better option but this is simple and works. If you know a better option, that's GREAT! Let's please put all good options here then on the Carpentries site.
+- There are [other ways](./Other-options.md) to do this, but a simple, consistent way needs to be spelled out. This is my suggestion. Some say that "revert" rather than "reset" is a better option but this is simple and works. If you know a better option, that's GREAT! Let's please put all good options here then on the Carpentries site.
 
 ### objectives: ###
 - Describe exact commands to sync a personal online (GitHub copy of) a Carpentries Workshop.
