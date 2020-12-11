@@ -15,14 +15,14 @@ This also has a little about how the GitHub really works from a beginner perspec
 and just to help beginners. *It may help experienced users understand the beginners.*
 
 Protocols: 
-1. [Clean Git for maintainers and beginners]({{ site.baseurl }}/Maintaining-for-beginners-narrative1).
+1. [Clean Git for maintainers and beginners](./Maintaining-for-beginners-narrative1.md).
 
-2. [Beginner-beginner maintainer's detailed]({{ site.baseurl }}/One-detailed-protocol-for-beginner-maintainers) (updated!).
+2. [Beginner-beginner maintainer's detailed](./One-detailed-protocol-for-beginner-maintainers.md) (updated!).
 
-3. [Beginner but not maintainer detailed]({{ site.baseurl }}/One-detailed-protocol-for-beginners) (updated)
+3. [Beginner but not maintainer detailed](./One-detailed-protocol-for-beginners.md) (updated)
 
-As we get suggestions, we can compile them in a single document so that problems and solutions are easy to see in one place. That document will be the [Suggestions-corrections-tips-and-tricks]({{ site.baseurl }}/Suggestions-corrections-tips-and-tricks) document.
+As we get suggestions, we can compile them in a single document so that problems and solutions are easy to see in one place. That document will be the [Suggestions-corrections-tips-and-tricks](./Suggestions-corrections-tips-and-tricks.md) document.
 
-[Motivations and Disclaimers]({{ site.baseurl }}/motivations_and_disclaimers)
+[Motivations and Disclaimers](./motivations_and_disclaimers.md)
 
 edit on [GitHub](https://github.com/hoytpr/git_beginner/)
