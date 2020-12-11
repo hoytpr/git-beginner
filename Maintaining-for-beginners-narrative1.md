@@ -152,7 +152,7 @@ Here are two detailed protocols[\*](./motivations_and_disclaimers.md):
 
 1. [For beginner contributors](./One-detailed-protocol-for-beginners.md)
 
-2. [For beginner maintainers](One-detailed-protocol-for-beginner-maintainers)
+2. [For beginner maintainers](./One-detailed-protocol-for-beginner-maintainers.md)
 
 After going through those protocols, and after everything is up to date and ready for any new changes, come back here for some insights into other potentially counfusing aspects of Github (and some solutions in shorter format). 
 
