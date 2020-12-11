@@ -1,7 +1,7 @@
 ---
 
 ---
-[Readme (home)]({{ site.baseurl }}/)
+[Readme (home)](./)
 
 ## One Detailed Protocol for Beginners: 
 
@@ -231,4 +231,4 @@ Then run this command:
 NOW your remote (upstream) GitHub repo will be ***forced*** to look like your local repo and
 will be up to date with the Carpentries gh-pages
 
-[Readme (home)]({{ site.baseurl }}/)
+[Readme (home)](./)
