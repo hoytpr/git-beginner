@@ -147,10 +147,10 @@ Maxim Belkin gave a helpful reply: (Edited for continuity)
 **Answer:** You **must** use the local repos, and the `fetch` at command line. 
 - BONUS: Once this becomes easy, you *can* move changes onto your remote GitHub repo where they render properly. 
 - CAUTION: Getting Ruby installed to run Jekyll for local rendering of the page can be **HARD**, but gives better error messages (Thanks to Ethan for demonstrating this)
+.
+Here are two detailed protocols[\*](./motivations_and_disclaimers.md):
 
-Here are two detailed protocols[\*]({{ site.baseurl }}/motivations_and_disclaimers):
-
-1. [For beginner contributors]({{ site.baseurl }}/One-detailed-protocol-for-beginners)
+1. [For beginner contributors](./One-detailed-protocol-for-beginners.md)
 
 2. [For beginner maintainers](One-detailed-protocol-for-beginner-maintainers)
 
