@@ -1,4 +1,7 @@
 ---
+layout: page
+title: Setup
+root: .
 ---
 
 # git-beginner
