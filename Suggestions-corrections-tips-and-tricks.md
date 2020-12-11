@@ -1,7 +1,7 @@
 ---
 
 ---
-[Readme (home)](./)
+[Readme (home)](./README.md)
 
 ### These are some discussion items that could be useful. 
 
