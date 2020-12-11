@@ -1,13 +1,12 @@
 ---
 layout: page
 title: Setup
-root: .
 ---
 
 # git-beginner
 Maintainers have hard times with improperly formatted lesson PRs
 
-It would be nice to have a page explaining the process for making a clean, up-to-date repo. There are [other options to this page]({{ site.github.url }}/Other-options)
+It would be nice to have a page explaining the process for making a clean, up-to-date repo. There are [other options to this page]({{ site.baseurl }}/Other-options)
 
 This also has a little about how GitHub really works just to help beginners.
 
