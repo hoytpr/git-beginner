@@ -2,10 +2,10 @@
 
 ---
 
-[Readme (home)]({{ site.baseurl }}/)
+[Readme (home)](./)
 
 ### Disclaimer:
-- There are [other ways]({{ site.baseurl }}/Other-options) to do this, but a simple, consistent way needs to be spelled out. This is my suggestion. Some say that "revert" rather than "reset" is a better option but this is simple and works. If you know a better option, that's GREAT! Let's please put all good options here then on the Carpentries site.
+- There are [other ways](./Other-options.md) to do this, but a simple, consistent way needs to be spelled out. This is my suggestion. Some say that "revert" rather than "reset" is a better option but this is simple and works. If you know a better option, that's GREAT! Let's please put all good options here then on the Carpentries site.
 
 ### objectives: ###
 - Describe exact commands to sync a personal online (GitHub copy of) a Carpentries Workshop.
@@ -47,7 +47,7 @@
 Most of you know this, but this just illustrates which branches are being used when you are pushing and fetching.  
 
 ## Steps ##
-- Create a perfect copy of a Carpentries lesson (*e.g.* just downloaded or cloned). See detailed instructions for [users](One-detailed-protocol-for-beginners) or [maintainers](One-detailed-protocol-for-beginner-maintainers). I'll put up a page on *"OMG the maintainer asked me for a change/correction what can I do?"*, later.
+- Create a perfect copy of a Carpentries lesson (*e.g.* just downloaded or cloned). See detailed instructions for [users](./One-detailed-protocol-for-beginners.md) or [maintainers](./One-detailed-protocol-for-beginner-maintainers.md). I'll put up a page on *"OMG the maintainer asked me for a change/correction what can I do?"*, later.
 
 1. Checkout (create) a new branch (My-branch) and make changes to the lesson on this branch
 2. Push your changes to the same branch on your Github (upstream) repo
@@ -147,12 +147,12 @@ Maxim Belkin gave a helpful reply: (Edited for continuity)
 **Answer:** You **must** use the local repos, and the `fetch` at command line. 
 - BONUS: Once this becomes easy, you *can* move changes onto your remote GitHub repo where they render properly. 
 - CAUTION: Getting Ruby installed to run Jekyll for local rendering of the page can be **HARD**, but gives better error messages (Thanks to Ethan for demonstrating this)
+.
+Here are two detailed protocols[\*](./motivations_and_disclaimers.md):
 
-Here are two detailed protocols[\*]({{ site.baseurl }}/motivations_and_disclaimers):
+1. [For beginner contributors](./One-detailed-protocol-for-beginners.md)
 
-1. [For beginner contributors]({{ site.baseurl }}/One-detailed-protocol-for-beginners)
-
-2. [For beginner maintainers](One-detailed-protocol-for-beginner-maintainers)
+2. [For beginner maintainers](./One-detailed-protocol-for-beginner-maintainers.md)
 
 After going through those protocols, and after everything is up to date and ready for any new changes, come back here for some insights into other potentially counfusing aspects of Github (and some solutions in shorter format). 
 
@@ -271,4 +271,4 @@ To https://github.com/hoytpr/shell-novice
 `"This branch is even with swcarpentry:gh-pages."`
 
 ### Imposter syndrome intensity should now be reduced!
-[Readme (home)]({{ site.baseurl }}/)
+[Readme (home)](./README.md)
