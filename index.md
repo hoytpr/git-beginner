@@ -11,6 +11,10 @@ are maintaining.*
 
 These pages contain information about the process for making a clean, up-to-date repo.
 
+**EDIT: GitHub now provides a simple button to update your repo to the latest version of the remote repo.**
+
+Because of this, most of this repo is obsolete. I'll be removing it when I have time to go through and delete all obsolete info, hoping there is still some info that is useful.
+
 This also has a little about how the GitHub really works from a beginner perspective, 
 and just to help beginners. *It may help experienced users understand the beginners.*
 
