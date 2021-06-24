@@ -7,6 +7,10 @@
 ### Disclaimer:
 - There are [other ways](./Other-options.md) to do this, but a simple, consistent way needs to be spelled out. This is my suggestion. Some say that "revert" rather than "reset" is a better option but this is simple and works. If you know a better option, that's GREAT! Let's please put all good options here then on the Carpentries site.
 
+**EDIT: GitHub now provides a simple button to update your repo to the latest version of the remote repo.**
+
+Because of this, most of this repo is obsolete. I'll be removing it when I have time to go through and delete all obsolete info, hoping there is still some info that is useful.
+
 ### objectives: ###
 - Describe exact commands to sync a personal online (GitHub copy of) a Carpentries Workshop.
 - Describe exact commands to sync a local copy of a Carpentries Workshop.
