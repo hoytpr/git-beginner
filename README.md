@@ -8,6 +8,10 @@ Maintainers have hard times with improperly formatted lesson PRs
 
 It would be nice to have a page explaining the process for making a clean, up-to-date repo. There are [other options to this page](./Other-options.md)
 
+**EDIT: GitHub now provides a simple button to update your repo to the latest version of the remote repo.**
+
+Because of this, most of this repo is obsolete. I'll be removing it when I have time to go through and delete all obsolete info, hoping there is still some info that is useful.
+
 This also has a little about how GitHub really works just to help beginners.
 
 Click on this link to [Clean Git for maintainers and beginners](./Maintaining-for-beginners-narrative1.md).
